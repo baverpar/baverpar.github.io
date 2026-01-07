@@ -1,0 +1,358 @@
+<!DOCTYPE html><html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Functions and equivalence relations</title>
+<!--Generated on Tue Jan  6 14:57:23 2026 by LaTeXML (version 0.8.6) http://dlmf.nist.gov/LaTeXML/.-->
+<!--Document created on .-->
+
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Functions and equivalence relations</h1>
+<div class="ltx_authors">
+<span class="ltx_creator ltx_role_author">
+<span class="ltx_personname">Muruhan Rathinam
+</span></span>
+</div>
+
+<div id="p1" class="ltx_para">
+<p class="ltx_p">We assume familiarity with the concepts of sets, elements, subsets,
+equality of sets, and cartesian products of two sets. Also we assume familiarity with concepts and notations of element belonging to a set (<math id="p1.m1" class="ltx_Math" alttext="\in" display="inline"><mo>∈</mo></math>), subsets (<math id="p1.m2" class="ltx_Math" alttext="\subseteq" display="inline"><mo>⊆</mo></math>), unions (<math id="p1.m3" class="ltx_Math" alttext="\cup" display="inline"><mo>∪</mo></math>), intersections (<math id="p1.m4" class="ltx_Math" alttext="\cap" display="inline"><mo>∩</mo></math>), relative complement (<math id="p1.m5" class="ltx_Math" alttext="\setminus" display="inline"><mo>∖</mo></math>) and complement <math id="p1.m6" class="ltx_Math" alttext="A^{c}" display="inline"><msup><mi>A</mi><mi>c</mi></msup></math> of a set <math id="p1.m7" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> (same as <math id="p1.m8" class="ltx_Math" alttext="S\setminus A" display="inline"><mrow><mi>S</mi><mo>∖</mo><mi>A</mi></mrow></math> where <math id="p1.m9" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> is known from the context). Moreover, familiarity with the concept of the Cartesian product <math id="p1.m10" class="ltx_Math" alttext="A\times B" display="inline"><mrow><mi>A</mi><mo>×</mo><mi>B</mi></mrow></math> of two sets <math id="p1.m11" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> and <math id="p1.m12" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> is assumed.</p>
+</div>
+<section id="S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1 </span>Functions</h2>
+
+<div id="S1.p1" class="ltx_para">
+<p class="ltx_p">Given nonempty sets <math id="S1.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> and <math id="S1.p1.m2" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>, a <span class="ltx_text ltx_font_bold">function</span> (or <span class="ltx_text ltx_font_bold">map</span>) <math id="S1.p1.m3" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> from <math id="S1.p1.m4" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> into <math id="S1.p1.m5" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>
+denoted by <math id="S1.p1.m6" class="ltx_Math" alttext="f:A\to B" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>A</mi><mo>→</mo><mi>B</mi></mrow></mrow></math> is an assignment of an element of <math id="S1.p1.m7" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> to each element of <math id="S1.p1.m8" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>. The element of <math id="S1.p1.m9" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> assigned to an element <math id="S1.p1.m10" class="ltx_Math" alttext="a\in A" display="inline"><mrow><mi>a</mi><mo>∈</mo><mi>A</mi></mrow></math> by <math id="S1.p1.m11" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is denoted by <math id="S1.p1.m12" class="ltx_Math" alttext="f(a)" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow></math>. The set <math id="S1.p1.m13" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is the <span class="ltx_text ltx_font_bold">domain</span> of the function <math id="S1.p1.m14" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math>, the set <math id="S1.p1.m15" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> is the <span class="ltx_text ltx_font_bold">codomain</span> of <math id="S1.p1.m16" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math>.</p>
+</div>
+<div id="S1.p2" class="ltx_para">
+<p class="ltx_p">Given two functions <math id="S1.p2.m1" class="ltx_Math" alttext="f,g:A\to B" display="inline"><mrow><mrow><mi>f</mi><mo>,</mo><mi>g</mi></mrow><mo>:</mo><mrow><mi>A</mi><mo>→</mo><mi>B</mi></mrow></mrow></math> (with same domain and codomain), we shall say <math id="S1.p2.m2" class="ltx_Math" alttext="f=g" display="inline"><mrow><mi>f</mi><mo>=</mo><mi>g</mi></mrow></math> provided that for all <math id="S1.p2.m3" class="ltx_Math" alttext="x\in A" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>A</mi></mrow></math>,
+<math id="S1.p2.m4" class="ltx_Math" alttext="f(x)=g(x)" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+<div id="S1.p3" class="ltx_para">
+<p class="ltx_p">Given a function <math id="S1.p3.m1" class="ltx_Math" alttext="f:A\to B" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>A</mi><mo>→</mo><mi>B</mi></mrow></mrow></math> and a subset <math id="S1.p3.m2" class="ltx_Math" alttext="E\subseteq A" display="inline"><mrow><mi>E</mi><mo>⊆</mo><mi>A</mi></mrow></math>
+the <span class="ltx_text ltx_font_bold">direct image</span> or simply the <span class="ltx_text ltx_font_bold">image</span> of <math id="S1.p3.m3" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> under <math id="S1.p3.m4" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is denoted by <math id="S1.p3.m5" class="ltx_Math" alttext="f(E)" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>E</mi><mo stretchy="false">)</mo></mrow></mrow></math> and is the set</p>
+<table id="S1.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex1.m1" class="ltx_Math" alttext="f(E)=\{y\in B\,|\,\exists x\in A\text{ s.t. }f(x)=y\}." display="block"><mrow><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>E</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>y</mi><mo>∈</mo><mpadded width="+1.7pt"><mi>B</mi></mpadded></mrow><mo rspace="4.2pt" stretchy="false">|</mo><mrow><mrow><mo>∃</mo><mi>x</mi></mrow><mo>∈</mo><mrow><mi>A</mi><mo>⁢</mo><mtext> s.t. </mtext><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>y</mi></mrow><mo stretchy="false">}</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Given a subset <math id="S1.p3.m6" class="ltx_Math" alttext="F\subseteq B" display="inline"><mrow><mi>F</mi><mo>⊆</mo><mi>B</mi></mrow></math>, the <span class="ltx_text ltx_font_bold">inverse image</span> of <math id="S1.p3.m7" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math> under <math id="S1.p3.m8" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> denoted by <math id="S1.p3.m9" class="ltx_Math" alttext="f^{-1}(F)" display="inline"><mrow><msup><mi>f</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>F</mi><mo stretchy="false">)</mo></mrow></mrow></math> is defined by</p>
+<table id="S1.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex2.m1" class="ltx_Math" alttext="f^{-1}(F)=\{x\in A\,|\,f(x)\in F\}." display="block"><mrow><mrow><mrow><msup><mi>f</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>F</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>x</mi><mo>∈</mo><mpadded width="+1.7pt"><mi>A</mi></mpadded></mrow><mo rspace="4.2pt" stretchy="false">|</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∈</mo><mi>F</mi></mrow><mo stretchy="false">}</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The <span class="ltx_text ltx_font_bold">range</span> of a function <math id="S1.p3.m10" class="ltx_Math" alttext="f:A\to B" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>A</mi><mo>→</mo><mi>B</mi></mrow></mrow></math> is <math id="S1.p3.m11" class="ltx_Math" alttext="f(A)" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+</div>
+<div id="S1.p4" class="ltx_para">
+<p class="ltx_p">A function <math id="S1.p4.m1" class="ltx_Math" alttext="f:A\to B" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>A</mi><mo>→</mo><mi>B</mi></mrow></mrow></math> is said to be <span class="ltx_text ltx_font_bold">injective</span> or <span class="ltx_text ltx_font_bold">one-to-one</span> provided that for all <math id="S1.p4.m2" class="ltx_Math" alttext="x,y\in A" display="inline"><mrow><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow><mo>∈</mo><mi>A</mi></mrow></math> if <math id="S1.p4.m3" class="ltx_Math" alttext="f(x)=f(y)" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> then <math id="S1.p4.m4" class="ltx_Math" alttext="x=y" display="inline"><mrow><mi>x</mi><mo>=</mo><mi>y</mi></mrow></math>.</p>
+</div>
+<div id="S1.p5" class="ltx_para">
+<p class="ltx_p">A function <math id="S1.p5.m1" class="ltx_Math" alttext="f:A\to B" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>A</mi><mo>→</mo><mi>B</mi></mrow></mrow></math> is said to be <span class="ltx_text ltx_font_bold">surjective</span> or <span class="ltx_text ltx_font_bold">onto</span> provided that for all <math id="S1.p5.m2" class="ltx_Math" alttext="y\in B" display="inline"><mrow><mi>y</mi><mo>∈</mo><mi>B</mi></mrow></math> there exists <math id="S1.p5.m3" class="ltx_Math" alttext="x\in A" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>A</mi></mrow></math> such that <math id="S1.p5.m4" class="ltx_Math" alttext="y=f(x)" display="inline"><mrow><mi>y</mi><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. Equivalently, <math id="S1.p5.m5" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is surjective if its range equals its codomain.</p>
+</div>
+<div id="S1.p6" class="ltx_para">
+<p class="ltx_p">A function <math id="S1.p6.m1" class="ltx_Math" alttext="f:A\to B" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>A</mi><mo>→</mo><mi>B</mi></mrow></mrow></math> is said to be <span class="ltx_text ltx_font_bold">bijective</span> or a <span class="ltx_text ltx_font_bold">one-to-one correspondence</span> provided
+it is both injective and surjective.</p>
+</div>
+<div id="S1.p7" class="ltx_para">
+<p class="ltx_p">Given sets <math id="S1.p7.m1" class="ltx_Math" alttext="A,B" display="inline"><mrow><mi>A</mi><mo>,</mo><mi>B</mi></mrow></math> and <math id="S1.p7.m2" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math>, and functions <math id="S1.p7.m3" class="ltx_Math" alttext="f:A\to B" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>A</mi><mo>→</mo><mi>B</mi></mrow></mrow></math> and <math id="S1.p7.m4" class="ltx_Math" alttext="g:B\to C" display="inline"><mrow><mi>g</mi><mo>:</mo><mrow><mi>B</mi><mo>→</mo><mi>C</mi></mrow></mrow></math>, the <span class="ltx_text ltx_font_bold">composition</span> <math id="S1.p7.m5" class="ltx_Math" alttext="g\circ f" display="inline"><mrow><mi>g</mi><mo>∘</mo><mi>f</mi></mrow></math> of <math id="S1.p7.m6" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> and <math id="S1.p7.m7" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is
+the function <math id="S1.p7.m8" class="ltx_Math" alttext="g\circ f:A\to C" display="inline"><mrow><mrow><mi>g</mi><mo>∘</mo><mi>f</mi></mrow><mo>:</mo><mrow><mi>A</mi><mo>→</mo><mi>C</mi></mrow></mrow></math> defined by</p>
+<table id="S1.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex3.m1" class="ltx_Math" alttext="(g\circ f)(x)=g(f(x))\quad\forall x\in A." display="block"><mrow><mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>g</mi><mo>∘</mo><mi>f</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo mathvariant="italic" separator="true"> </mo><mrow><mrow><mo>∀</mo><mi>x</mi></mrow><mo>∈</mo><mi>A</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="Thmproposition1" class="ltx_theorem ltx_theorem_proposition">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Proposition 1</span></span></h6>
+<div id="Thmproposition1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Composition of functions is associative. That is, if <math id="Thmproposition1.p1.m1" class="ltx_Math" alttext="f:A\to B" display="inline"><mrow><mi>f</mi><mo mathvariant="normal">:</mo><mrow><mi>A</mi><mo mathvariant="normal">→</mo><mi>B</mi></mrow></mrow></math>, <math id="Thmproposition1.p1.m2" class="ltx_Math" alttext="g:B\to C" display="inline"><mrow><mi>g</mi><mo mathvariant="normal">:</mo><mrow><mi>B</mi><mo mathvariant="normal">→</mo><mi>C</mi></mrow></mrow></math> and <math id="Thmproposition1.p1.m3" class="ltx_Math" alttext="h:C\to D" display="inline"><mrow><mi>h</mi><mo mathvariant="normal">:</mo><mrow><mi>C</mi><mo mathvariant="normal">→</mo><mi>D</mi></mrow></mrow></math> then</span></p>
+<table id="S1.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex4.m1" class="ltx_Math" alttext="h\circ(g\circ f)=(h\circ g)\circ f." display="block"><mrow><mrow><mrow><mi>h</mi><mo>∘</mo><mrow><mo stretchy="false">(</mo><mrow><mi>g</mi><mo>∘</mo><mi>f</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>h</mi><mo>∘</mo><mi>g</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∘</mo><mi>f</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</div>
+<div id="S1.p8" class="ltx_para">
+<p class="ltx_p">Given a set <math id="S1.p8.m1" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math>, the <span class="ltx_text ltx_font_bold">identity</span> on <math id="S1.p8.m2" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> is the function <math id="S1.p8.m3" class="ltx_Math" alttext="\text{id}_{S}:S\to S" display="inline"><mrow><msub><mtext>id</mtext><mi>S</mi></msub><mo>:</mo><mrow><mi>S</mi><mo>→</mo><mi>S</mi></mrow></mrow></math> defined by <math id="S1.p8.m4" class="ltx_Math" alttext="\text{id}_{S}(x)=x" display="inline"><mrow><mrow><msub><mtext>id</mtext><mi>S</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>x</mi></mrow></math> for all <math id="S1.p8.m5" class="ltx_Math" alttext="x\in S" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>S</mi></mrow></math>.</p>
+</div>
+<div id="S1.p9" class="ltx_para">
+<p class="ltx_p">Given a set <math id="S1.p9.m1" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> and a subset <math id="S1.p9.m2" class="ltx_Math" alttext="T\subseteq S" display="inline"><mrow><mi>T</mi><mo>⊆</mo><mi>S</mi></mrow></math> the <span class="ltx_text ltx_font_bold">inclusion</span> function <math id="S1.p9.m3" class="ltx_Math" alttext="\iota:T\to S" display="inline"><mrow><mi>ι</mi><mo>:</mo><mrow><mi>T</mi><mo>→</mo><mi>S</mi></mrow></mrow></math> of <math id="S1.p9.m4" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math> into <math id="S1.p9.m5" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> is defined by <math id="S1.p9.m6" class="ltx_Math" alttext="\iota(x)=x" display="inline"><mrow><mrow><mi>ι</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>x</mi></mrow></math> for all <math id="S1.p9.m7" class="ltx_Math" alttext="x\in T" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>T</mi></mrow></math>.</p>
+</div>
+<div id="S1.p10" class="ltx_para">
+<p class="ltx_p">Let <math id="S1.p10.m1" class="ltx_Math" alttext="f:A\to B" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>A</mi><mo>→</mo><mi>B</mi></mrow></mrow></math> be a function. A function <math id="S1.p10.m2" class="ltx_Math" alttext="g:B\to A" display="inline"><mrow><mi>g</mi><mo>:</mo><mrow><mi>B</mi><mo>→</mo><mi>A</mi></mrow></mrow></math>
+is said to be an <span class="ltx_text ltx_font_bold">inverse</span> of <math id="S1.p10.m3" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> provided</p>
+<table id="S1.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex5.m1" class="ltx_Math" alttext="g\circ f=\text{id}_{A}\quad\text{ and }f\circ g=\text{id}_{B}." display="block"><mrow><mrow><mrow><mrow><mi>g</mi><mo>∘</mo><mi>f</mi></mrow><mo>=</mo><msub><mtext>id</mtext><mi>A</mi></msub></mrow><mo mathvariant="italic" separator="true"> </mo><mrow><mrow><mrow><mtext> and </mtext><mo>⁢</mo><mi>f</mi></mrow><mo>∘</mo><mi>g</mi></mrow><mo>=</mo><msub><mtext>id</mtext><mi>B</mi></msub></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">From the definition it follows that <math id="S1.p10.m4" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> is an inverse of <math id="S1.p10.m5" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> if and only if <math id="S1.p10.m6" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is an inverse of <math id="S1.p10.m7" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math>.</p>
+</div>
+<div id="Thmproposition2" class="ltx_theorem ltx_theorem_proposition">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Proposition 2</span></span></h6>
+<div id="Thmproposition2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If <math id="Thmproposition2.p1.m1" class="ltx_Math" alttext="f:A\to B" display="inline"><mrow><mi>f</mi><mo mathvariant="normal">:</mo><mrow><mi>A</mi><mo mathvariant="normal">→</mo><mi>B</mi></mrow></mrow></math> has an inverse, then it is unique.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="S1.p11" class="ltx_para">
+<p class="ltx_p">Let <math id="S1.p11.m1" class="ltx_Math" alttext="g,h:B\to A" display="inline"><mrow><mrow><mi>g</mi><mo>,</mo><mi>h</mi></mrow><mo>:</mo><mrow><mi>B</mi><mo>→</mo><mi>A</mi></mrow></mrow></math> both be inverses of <math id="S1.p11.m2" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math>. Then</p>
+<table id="S1.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex6.m1" class="ltx_Math" alttext="g\circ(f\circ h)=g\circ\text{id}_{B}=g," display="block"><mrow><mrow><mrow><mi>g</mi><mo>∘</mo><mrow><mo stretchy="false">(</mo><mrow><mi>f</mi><mo>∘</mo><mi>h</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>g</mi><mo>∘</mo><msub><mtext>id</mtext><mi>B</mi></msub></mrow><mo>=</mo><mi>g</mi></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and</p>
+<table id="S1.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex7.m1" class="ltx_Math" alttext="(g\circ f)\circ h=\text{id}_{A}\circ h=h." display="block"><mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>g</mi><mo>∘</mo><mi>f</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∘</mo><mi>h</mi></mrow><mo>=</mo><mrow><msub><mtext>id</mtext><mi>A</mi></msub><mo>∘</mo><mi>h</mi></mrow><mo>=</mo><mi>h</mi></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The associativity of compositions implies <math id="S1.p11.m3" class="ltx_Math" alttext="g=h" display="inline"><mrow><mi>g</mi><mo>=</mo><mi>h</mi></mrow></math>.
+∎</p>
+</div>
+</div>
+<div id="S1.p12" class="ltx_para">
+<p class="ltx_p">When <math id="S1.p12.m1" class="ltx_Math" alttext="f:A\to B" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>A</mi><mo>→</mo><mi>B</mi></mrow></mrow></math> has an inverse, its unique inverse is denoted by <math id="S1.p12.m2" class="ltx_Math" alttext="f^{-1}" display="inline"><msup><mi>f</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></math>. <span class="ltx_text ltx_font_italic">Do not confuse the inverse function notation <math id="S1.p12.m3" class="ltx_Math" alttext="f^{-1}" display="inline"><msup><mi>f</mi><mrow><mo mathvariant="normal">-</mo><mn mathvariant="normal">1</mn></mrow></msup></math> with the inverse image notation <math id="S1.p12.m4" class="ltx_Math" alttext="f^{-1}" display="inline"><msup><mi>f</mi><mrow><mo mathvariant="normal">-</mo><mn mathvariant="normal">1</mn></mrow></msup></math></span>!</p>
+</div>
+<div id="Thmproposition3" class="ltx_theorem ltx_theorem_proposition">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Proposition 3</span></span></h6>
+<div id="Thmproposition3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <math id="Thmproposition3.p1.m1" class="ltx_Math" alttext="f:A\to B" display="inline"><mrow><mi>f</mi><mo mathvariant="normal">:</mo><mrow><mi>A</mi><mo mathvariant="normal">→</mo><mi>B</mi></mrow></mrow></math> be a function. Then <math id="Thmproposition3.p1.m2" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> has an inverse if and only if it is a bijection.
+</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="S1.p13" class="ltx_para">
+<p class="ltx_p">Suppose <math id="S1.p13.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is a bijection. Define <math id="S1.p13.m2" class="ltx_Math" alttext="g:B\to A" display="inline"><mrow><mi>g</mi><mo>:</mo><mrow><mi>B</mi><mo>→</mo><mi>A</mi></mrow></mrow></math> as follows.
+Given <math id="S1.p13.m3" class="ltx_Math" alttext="y\in B" display="inline"><mrow><mi>y</mi><mo>∈</mo><mi>B</mi></mrow></math> arbitrary, since <math id="S1.p13.m4" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is surjective, there exists <math id="S1.p13.m5" class="ltx_Math" alttext="x\in A" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>A</mi></mrow></math> such that <math id="S1.p13.m6" class="ltx_Math" alttext="f(x)=y" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>y</mi></mrow></math>. Moreover, since <math id="S1.p13.m7" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is injective, there is only one such <math id="S1.p13.m8" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>. Define <math id="S1.p13.m9" class="ltx_Math" alttext="g(y)=x" display="inline"><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>x</mi></mrow></math>.
+Having defined <math id="S1.p13.m10" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math>, we shall show that <math id="S1.p13.m11" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> is the inverse of <math id="S1.p13.m12" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math>.</p>
+</div>
+<div id="S1.p14" class="ltx_para">
+<p class="ltx_p">First we show that <math id="S1.p14.m1" class="ltx_Math" alttext="g\circ f=\text{id}_{A}" display="inline"><mrow><mrow><mi>g</mi><mo>∘</mo><mi>f</mi></mrow><mo>=</mo><msub><mtext>id</mtext><mi>A</mi></msub></mrow></math>. To that end, given arbitrary <math id="S1.p14.m2" class="ltx_Math" alttext="x\in A" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>A</mi></mrow></math>, we see that <math id="S1.p14.m3" class="ltx_Math" alttext="(g\circ f)(x)=g(f(x))=x" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>g</mi><mo>∘</mo><mi>f</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>x</mi></mrow></math> by definition of <math id="S1.p14.m4" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math>.</p>
+</div>
+<div id="S1.p15" class="ltx_para">
+<p class="ltx_p">Next we show that <math id="S1.p15.m1" class="ltx_Math" alttext="f\circ g=\text{id}_{B}" display="inline"><mrow><mrow><mi>f</mi><mo>∘</mo><mi>g</mi></mrow><mo>=</mo><msub><mtext>id</mtext><mi>B</mi></msub></mrow></math>. To that end, let <math id="S1.p15.m2" class="ltx_Math" alttext="y\in B" display="inline"><mrow><mi>y</mi><mo>∈</mo><mi>B</mi></mrow></math> be arbitrary. Then there exists one and only one <math id="S1.p15.m3" class="ltx_Math" alttext="x\in A" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>A</mi></mrow></math> such that <math id="S1.p15.m4" class="ltx_Math" alttext="y=f(x)" display="inline"><mrow><mi>y</mi><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. By definition of <math id="S1.p15.m5" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math>, <math id="S1.p15.m6" class="ltx_Math" alttext="x=g(y)" display="inline"><mrow><mi>x</mi><mo>=</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. Hence,
+<math id="S1.p15.m7" class="ltx_Math" alttext="(f\circ g)(y)=f(g(y))=f(x)=y" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>f</mi><mo>∘</mo><mi>g</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>y</mi></mrow></math>.</p>
+</div>
+<div id="S1.p16" class="ltx_para">
+<p class="ltx_p">To show the converse, suppose that <math id="S1.p16.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> has an inverse, say
+<math id="S1.p16.m2" class="ltx_Math" alttext="g:B\to A" display="inline"><mrow><mi>g</mi><mo>:</mo><mrow><mi>B</mi><mo>→</mo><mi>A</mi></mrow></mrow></math>.</p>
+</div>
+<div id="S1.p17" class="ltx_para">
+<p class="ltx_p">We shall first show that <math id="S1.p17.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is a surjection. To that end, let <math id="S1.p17.m2" class="ltx_Math" alttext="y\in B" display="inline"><mrow><mi>y</mi><mo>∈</mo><mi>B</mi></mrow></math> be arbitrary. Then since <math id="S1.p17.m3" class="ltx_Math" alttext="f\circ g=\text{id}_{B}" display="inline"><mrow><mrow><mi>f</mi><mo>∘</mo><mi>g</mi></mrow><mo>=</mo><msub><mtext>id</mtext><mi>B</mi></msub></mrow></math>, it follows that <math id="S1.p17.m4" class="ltx_Math" alttext="f(g(y))=y" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>y</mi></mrow></math>. Let <math id="S1.p17.m5" class="ltx_Math" alttext="x=g(y)\in A" display="inline"><mrow><mi>x</mi><mo>=</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∈</mo><mi>A</mi></mrow></math>. Thus there exists <math id="S1.p17.m6" class="ltx_Math" alttext="x\in A" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>A</mi></mrow></math> such that <math id="S1.p17.m7" class="ltx_Math" alttext="f(x)=y" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>y</mi></mrow></math>, showing <math id="S1.p17.m8" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> to be surjective.</p>
+</div>
+<div id="S1.p18" class="ltx_para">
+<p class="ltx_p">Next we shall show that <math id="S1.p18.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is injective. Suppose <math id="S1.p18.m2" class="ltx_Math" alttext="x,x^{\prime}\in A" display="inline"><mrow><mrow><mi>x</mi><mo>,</mo><msup><mi>x</mi><mo>′</mo></msup></mrow><mo>∈</mo><mi>A</mi></mrow></math> are such that <math id="S1.p18.m3" class="ltx_Math" alttext="f(x)=f(x^{\prime})" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′</mo></msup><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. Then <math id="S1.p18.m4" class="ltx_Math" alttext="g(f(x))=g(f(x^{\prime}))" display="inline"><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′</mo></msup><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.
+Thus <math id="S1.p18.m5" class="ltx_Math" alttext="(g\circ f)(x)=(g\circ f)(x^{\prime})" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>g</mi><mo>∘</mo><mi>f</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>g</mi><mo>∘</mo><mi>f</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′</mo></msup><mo stretchy="false">)</mo></mrow></mrow></mrow></math> and hence <math id="S1.p18.m6" class="ltx_Math" alttext="\text{id}_{A}(x)=\text{id}_{A}(x^{\prime})" display="inline"><mrow><mrow><msub><mtext>id</mtext><mi>A</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mtext>id</mtext><mi>A</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mo>′</mo></msup><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, which implies that <math id="S1.p18.m7" class="ltx_Math" alttext="x=x^{\prime}" display="inline"><mrow><mi>x</mi><mo>=</mo><msup><mi>x</mi><mo>′</mo></msup></mrow></math>. This shows that <math id="S1.p18.m8" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is injective.
+∎</p>
+</div>
+</div>
+<div id="S1.p19" class="ltx_para">
+<p class="ltx_p">Given a nonempty set <math id="S1.p19.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>, a <span class="ltx_text ltx_font_bold">binary operation</span> on <math id="S1.p19.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is a function <math id="S1.p19.m3" class="ltx_Math" alttext="f:A\times A\to A" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mrow><mi>A</mi><mo>×</mo><mi>A</mi></mrow><mo>→</mo><mi>A</mi></mrow></mrow></math>. The term <span class="ltx_text ltx_font_bold">magma</span> is used to denote the pair <math id="S1.p19.m4" class="ltx_Math" alttext="(A,f)" display="inline"><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>,</mo><mi>f</mi><mo stretchy="false">)</mo></mrow></math> where <math id="S1.p19.m5" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is a nonempty set and <math id="S1.p19.m6" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is a binary operation on <math id="S1.p19.m7" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>. Magmas, that is, sets with a binary operation on them will play a central role in abstract algebra. Given a set <math id="S1.p19.m8" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> with a binary operation <math id="S1.p19.m9" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math>, it is often common to write <math id="S1.p19.m10" class="ltx_Math" alttext="x\,f\,y" display="inline"><mrow><mpadded width="+1.7pt"><mi>x</mi></mpadded><mo>⁢</mo><mpadded width="+1.7pt"><mi>f</mi></mpadded><mo>⁢</mo><mi>y</mi></mrow></math> in place of <math id="S1.p19.m11" class="ltx_Math" alttext="f(x,y)" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></math>. As an example, consider the operation of addition <math id="S1.p19.m12" class="ltx_Math" alttext="+" display="inline"><mo>+</mo></math> on the set  of real numbers. We write <math id="S1.p19.m14" class="ltx_Math" alttext="x+y" display="inline"><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow></math> instead of <math id="S1.p19.m15" class="ltx_Math" alttext="+(x,y)" display="inline"><mrow><mo>+</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+</div>
+</section>
+<section id="S2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">2 </span>Equivalence relations</h2>
+
+<div id="S2.p1" class="ltx_para">
+<p class="ltx_p">Given a pair of nonempty sets <math id="S2.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> and <math id="S2.p1.m2" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>, a <span class="ltx_text ltx_font_bold">binary relation</span> <math id="S2.p1.m3" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> <span class="ltx_text ltx_font_bold">over</span> <math id="S2.p1.m4" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> and <math id="S2.p1.m5" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> is a subset of <math id="S2.p1.m6" class="ltx_Math" alttext="A\times B" display="inline"><mrow><mi>A</mi><mo>×</mo><mi>B</mi></mrow></math>. If <math id="S2.p1.m7" class="ltx_Math" alttext="A=B" display="inline"><mrow><mi>A</mi><mo>=</mo><mi>B</mi></mrow></math> we use the phrase <span class="ltx_text ltx_font_bold">binary relation on</span> <math id="S2.p1.m8" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>.
+Given <math id="S2.p1.m9" class="ltx_Math" alttext="x\in A" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>A</mi></mrow></math> and <math id="S2.p1.m10" class="ltx_Math" alttext="y\in B" display="inline"><mrow><mi>y</mi><mo>∈</mo><mi>B</mi></mrow></math>, we often write <math id="S2.p1.m11" class="ltx_Math" alttext="x\,R\,y" display="inline"><mrow><mpadded width="+1.7pt"><mi>x</mi></mpadded><mo>⁢</mo><mpadded width="+1.7pt"><mi>R</mi></mpadded><mo>⁢</mo><mi>y</mi></mrow></math> to indicate that <math id="S2.p1.m12" class="ltx_Math" alttext="(x,y)\in R" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>R</mi></mrow></math>.
+</p>
+</div>
+<div id="S2.p2" class="ltx_para">
+<p class="ltx_p">Given a set <math id="S2.p2.m1" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math>, a binary relation <math id="S2.p2.m2" class="ltx_Math" alttext="\sim" display="inline"><mo>∼</mo></math> on <math id="S2.p2.m3" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> is said to be an <span class="ltx_text ltx_font_bold">equivalence relation</span> provided</p>
+<ol id="S2.I1" class="ltx_enumerate">
+<li id="S2.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S2.I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S2.I1.i1.p1.m1" class="ltx_Math" alttext="x\,\sim\,x" display="inline"><mrow><mpadded width="+1.7pt"><mi>x</mi></mpadded><mo rspace="4.2pt">∼</mo><mi>x</mi></mrow></math> for all <math id="S2.I1.i1.p1.m2" class="ltx_Math" alttext="x\in S" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>S</mi></mrow></math>. <span class="ltx_text ltx_font_italic">Reflexive.</span></p>
+</div>
+</li>
+<li id="S2.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S2.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">For all <math id="S2.I1.i2.p1.m1" class="ltx_Math" alttext="x,y\in S" display="inline"><mrow><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow><mo>∈</mo><mi>S</mi></mrow></math>, <math id="S2.I1.i2.p1.m2" class="ltx_Math" alttext="x\,\sim\,y" display="inline"><mrow><mpadded width="+1.7pt"><mi>x</mi></mpadded><mo rspace="4.2pt">∼</mo><mi>y</mi></mrow></math> if and only if <math id="S2.I1.i2.p1.m3" class="ltx_Math" alttext="y\,\sim\,x" display="inline"><mrow><mpadded width="+1.7pt"><mi>y</mi></mpadded><mo rspace="4.2pt">∼</mo><mi>x</mi></mrow></math>. <span class="ltx_text ltx_font_italic">Symmetric.</span></p>
+</div>
+</li>
+<li id="S2.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="S2.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">For all <math id="S2.I1.i3.p1.m1" class="ltx_Math" alttext="x,y,z\in S" display="inline"><mrow><mrow><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi></mrow><mo>∈</mo><mi>S</mi></mrow></math>, if <math id="S2.I1.i3.p1.m2" class="ltx_Math" alttext="x\sim y" display="inline"><mrow><mi>x</mi><mo>∼</mo><mi>y</mi></mrow></math> and <math id="S2.I1.i3.p1.m3" class="ltx_Math" alttext="y\sim z" display="inline"><mrow><mi>y</mi><mo>∼</mo><mi>z</mi></mrow></math> then <math id="S2.I1.i3.p1.m4" class="ltx_Math" alttext="x\sim z" display="inline"><mrow><mi>x</mi><mo>∼</mo><mi>z</mi></mrow></math>. <span class="ltx_text ltx_font_italic">Transitive.</span></p>
+</div>
+</li>
+</ol>
+</div>
+<div id="S2.p3" class="ltx_para">
+<p class="ltx_p">Let <math id="S2.p3.m1" class="ltx_Math" alttext="\sim" display="inline"><mo>∼</mo></math> be an equivalence relation on a nonempty set <math id="S2.p3.m2" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math>.
+Given an element <math id="S2.p3.m3" class="ltx_Math" alttext="x\in S" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>S</mi></mrow></math>, the <span class="ltx_text ltx_font_bold">equivalence class</span> of <math id="S2.p3.m4" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> with respect to <math id="S2.p3.m5" class="ltx_Math" alttext="\sim" display="inline"><mo>∼</mo></math>, denoted by <math id="S2.p3.m6" class="ltx_Math" alttext="[x]" display="inline"><mrow><mo stretchy="false">[</mo><mi>x</mi><mo stretchy="false">]</mo></mrow></math> is the subset of <math id="S2.p3.m7" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> defined by</p>
+<table id="S2.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex8.m1" class="ltx_Math" alttext="[x]=\{y\in S\,|\,x\sim y\}." display="block"><mrow><mrow><mrow><mo stretchy="false">[</mo><mi>x</mi><mo stretchy="false">]</mo></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>y</mi><mo>∈</mo><mpadded width="+1.7pt"><mi>S</mi></mpadded></mrow><mo rspace="4.2pt" stretchy="false">|</mo><mrow><mi>x</mi><mo>∼</mo><mi>y</mi></mrow><mo stretchy="false">}</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">A nonempty subset <math id="S2.p3.m8" class="ltx_Math" alttext="A\subseteq S" display="inline"><mrow><mi>A</mi><mo>⊆</mo><mi>S</mi></mrow></math> is an <span class="ltx_text ltx_font_bold">equivalence class</span> with respect to <math id="S2.p3.m9" class="ltx_Math" alttext="(S,\sim)" display="inline"><mrow><mo stretchy="false">(</mo><mi>S</mi><mo>,</mo><mo>∼</mo><mo stretchy="false">)</mo></mrow></math> provided there exists <math id="S2.p3.m10" class="ltx_Math" alttext="x\in S" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>S</mi></mrow></math> such that <math id="S2.p3.m11" class="ltx_Math" alttext="A=[x]" display="inline"><mrow><mi>A</mi><mo>=</mo><mrow><mo stretchy="false">[</mo><mi>x</mi><mo stretchy="false">]</mo></mrow></mrow></math>.</p>
+</div>
+<div id="Thmlemma1" class="ltx_theorem ltx_theorem_lemma">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Lemma 1</span></span></h6>
+<div id="Thmlemma1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <math id="Thmlemma1.p1.m1" class="ltx_Math" alttext="\sim" display="inline"><mo mathvariant="normal">∼</mo></math> be an equivalence relation on a nonempty set <math id="Thmlemma1.p1.m2" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math>. Suppose <math id="Thmlemma1.p1.m3" class="ltx_Math" alttext="A,B" display="inline"><mrow><mi>A</mi><mo mathvariant="normal">,</mo><mi>B</mi></mrow></math> are equivalence classes. Then either <math id="Thmlemma1.p1.m4" class="ltx_Math" alttext="A=B" display="inline"><mrow><mi>A</mi><mo mathvariant="normal">=</mo><mi>B</mi></mrow></math> or <math id="Thmlemma1.p1.m5" class="ltx_Math" alttext="A\cap B=\emptyset" display="inline"><mrow><mrow><mi>A</mi><mo mathvariant="normal">∩</mo><mi>B</mi></mrow><mo mathvariant="normal">=</mo><mi mathvariant="normal">∅</mi></mrow></math>.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="S2.p4" class="ltx_para">
+<p class="ltx_p">Suppose <math id="S2.p4.m1" class="ltx_Math" alttext="A\cap B" display="inline"><mrow><mi>A</mi><mo>∩</mo><mi>B</mi></mrow></math> is nonempty. Let <math id="S2.p4.m2" class="ltx_Math" alttext="x\in A\cap B" display="inline"><mrow><mi>x</mi><mo>∈</mo><mrow><mi>A</mi><mo>∩</mo><mi>B</mi></mrow></mrow></math>.
+We shall show that <math id="S2.p4.m3" class="ltx_Math" alttext="A=B" display="inline"><mrow><mi>A</mi><mo>=</mo><mi>B</mi></mrow></math>.</p>
+</div>
+<div id="S2.p5" class="ltx_para">
+<p class="ltx_p">Let <math id="S2.p5.m1" class="ltx_Math" alttext="y\in A" display="inline"><mrow><mi>y</mi><mo>∈</mo><mi>A</mi></mrow></math> be an arbitrary element. Since <math id="S2.p5.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is an equivalence class and <math id="S2.p5.m3" class="ltx_Math" alttext="x,y\in A" display="inline"><mrow><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow><mo>∈</mo><mi>A</mi></mrow></math>, it follows that <math id="S2.p5.m4" class="ltx_Math" alttext="x\sim y" display="inline"><mrow><mi>x</mi><mo>∼</mo><mi>y</mi></mrow></math>. Since <math id="S2.p5.m5" class="ltx_Math" alttext="x\in B" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>B</mi></mrow></math>, <math id="S2.p5.m6" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> is an equivalence class and <math id="S2.p5.m7" class="ltx_Math" alttext="x\sim y" display="inline"><mrow><mi>x</mi><mo>∼</mo><mi>y</mi></mrow></math> it follows that <math id="S2.p5.m8" class="ltx_Math" alttext="y\in B" display="inline"><mrow><mi>y</mi><mo>∈</mo><mi>B</mi></mrow></math>. Thus <math id="S2.p5.m9" class="ltx_Math" alttext="A\subseteq B" display="inline"><mrow><mi>A</mi><mo>⊆</mo><mi>B</mi></mrow></math>.</p>
+</div>
+<div id="S2.p6" class="ltx_para">
+<p class="ltx_p">A similar argument shows <math id="S2.p6.m1" class="ltx_Math" alttext="B\subseteq A" display="inline"><mrow><mi>B</mi><mo>⊆</mo><mi>A</mi></mrow></math>.
+∎</p>
+</div>
+</div>
+<div id="S2.p7" class="ltx_para">
+<p class="ltx_p">Recall the notation <math id="S2.p7.m1" class="ltx_Math" alttext="2^{S}" display="inline"><msup><mn>2</mn><mi>S</mi></msup></math> which stands for the <span class="ltx_text ltx_font_bold">power set</span> of a set <math id="S2.p7.m2" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> which consists of every subset of <math id="S2.p7.m3" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> including <math id="S2.p7.m4" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> and <math id="S2.p7.m5" class="ltx_Math" alttext="\emptyset" display="inline"><mi mathvariant="normal">∅</mi></math>.</p>
+</div>
+<div id="S2.p8" class="ltx_para">
+<p class="ltx_p">The set of all equivalence classes of <math id="S2.p8.m1" class="ltx_Math" alttext="(S,\sim)" display="inline"><mrow><mo stretchy="false">(</mo><mi>S</mi><mo>,</mo><mo>∼</mo><mo stretchy="false">)</mo></mrow></math> is called the <span class="ltx_text ltx_font_bold">factor set</span> of <math id="S2.p8.m2" class="ltx_Math" alttext="(S,\sim)" display="inline"><mrow><mo stretchy="false">(</mo><mi>S</mi><mo>,</mo><mo>∼</mo><mo stretchy="false">)</mo></mrow></math>. Note that the factor set is a subset of <math id="S2.p8.m3" class="ltx_Math" alttext="2^{S}" display="inline"><msup><mn>2</mn><mi>S</mi></msup></math> and it is denoted by <math id="S2.p8.m4" class="ltx_Math" alttext="\nicefrac{{S}}{{\sim}}" display="inline"><mrow><mpadded depth="-0.3em" height="+0.3em" voffset="0.3em"><mi mathsize="70%">S</mi></mpadded><mpadded lspace="-0.1em" width="-0.15em"><mo stretchy="true">/</mo></mpadded><mo mathsize="70%" stretchy="false">∼</mo></mrow></math>.</p>
+</div>
+<div id="S2.p9" class="ltx_para">
+<p class="ltx_p">Given a nonempty set <math id="S2.p9.m1" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math>, a subset <math id="S2.p9.m2" class="ltx_Math" alttext="P\subseteq 2^{S}" display="inline"><mrow><mi>P</mi><mo>⊆</mo><msup><mn>2</mn><mi>S</mi></msup></mrow></math> is said to be a <span class="ltx_text ltx_font_bold">partition</span> of <math id="S2.p9.m3" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> provided <math id="S2.p9.m4" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> satisfies the following conditions.</p>
+<ol id="S2.I2" class="ltx_enumerate">
+<li id="S2.I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span> 
+<div id="S2.I2.i1.p1" class="ltx_para">
+<p class="ltx_p">For each <math id="S2.I2.i1.p1.m1" class="ltx_Math" alttext="A\in P" display="inline"><mrow><mi>A</mi><mo>∈</mo><mi>P</mi></mrow></math>, <math id="S2.I2.i1.p1.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is nonempty.</p>
+</div>
+</li>
+<li id="S2.I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span> 
+<div id="S2.I2.i2.p1" class="ltx_para">
+<p class="ltx_p">If <math id="S2.I2.i2.p1.m1" class="ltx_Math" alttext="A,B\in P" display="inline"><mrow><mrow><mi>A</mi><mo>,</mo><mi>B</mi></mrow><mo>∈</mo><mi>P</mi></mrow></math> are distinct (meaning <math id="S2.I2.i2.p1.m2" class="ltx_Math" alttext="A\neq B" display="inline"><mrow><mi>A</mi><mo>≠</mo><mi>B</mi></mrow></math>), then <math id="S2.I2.i2.p1.m3" class="ltx_Math" alttext="A\cap B=\emptyset" display="inline"><mrow><mrow><mi>A</mi><mo>∩</mo><mi>B</mi></mrow><mo>=</mo><mi mathvariant="normal">∅</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="S2.I2.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span> 
+<div id="S2.I2.i3.p1" class="ltx_para">
+<p class="ltx_p">The union of all elements of <math id="S2.I2.i3.p1.m1" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> is <math id="S2.I2.i3.p1.m2" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math>:</p>
+<table id="S2.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex9.m1" class="ltx_Math" alttext="\bigcup_{A\in P}A=S." display="block"><mrow><mrow><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">⋃</mo><mrow><mi>A</mi><mo>∈</mo><mi>P</mi></mrow></munder><mi>A</mi></mrow><mo>=</mo><mi>S</mi></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</li>
+</ol>
+</div>
+<div id="Thmproposition4" class="ltx_theorem ltx_theorem_proposition">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Proposition 4</span></span></h6>
+<div id="Thmproposition4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <math id="Thmproposition4.p1.m1" class="ltx_Math" alttext="\sim" display="inline"><mo mathvariant="normal">∼</mo></math> be an equivalence relation on a nonempty set <math id="Thmproposition4.p1.m2" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math>.
+Then <math id="Thmproposition4.p1.m3" class="ltx_Math" alttext="\nicefrac{{S}}{{\sim}}" display="inline"><mrow><mpadded depth="-0.3em" height="+0.3em" voffset="0.3em"><mi mathsize="70%">S</mi></mpadded><mpadded lspace="-0.1em" width="-0.15em"><mo mathvariant="normal" stretchy="true">/</mo></mpadded><mo mathsize="70%" mathvariant="normal" stretchy="false">∼</mo></mrow></math> is a partition of <math id="Thmproposition4.p1.m4" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math>. Conversely if <math id="Thmproposition4.p1.m5" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> is a partition of <math id="Thmproposition4.p1.m6" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math>, then there exists a unique equivalence relation <math id="Thmproposition4.p1.m7" class="ltx_Math" alttext="\sim" display="inline"><mo mathvariant="normal">∼</mo></math> on <math id="Thmproposition4.p1.m8" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> such that <math id="Thmproposition4.p1.m9" class="ltx_Math" alttext="P=\nicefrac{{S}}{{\sim}}" display="inline"><mrow><mi>P</mi><mo mathvariant="normal">=</mo><mrow><mpadded depth="-0.3em" height="+0.3em" voffset="0.3em"><mi mathsize="70%">S</mi></mpadded><mpadded lspace="-0.1em" width="-0.15em"><mo mathvariant="normal" stretchy="true">/</mo></mpadded><mo mathsize="70%" mathvariant="normal" stretchy="false">∼</mo></mrow></mrow></math>.</span></p>
+</div>
+</div>
+<div id="S2.p10" class="ltx_para">
+<p class="ltx_p">Let <math id="S2.p10.m1" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> be a nonempty set and <math id="S2.p10.m2" class="ltx_Math" alttext="\sim" display="inline"><mo>∼</mo></math> an equivalence relation on <math id="S2.p10.m3" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math>. The function <math id="S2.p10.m4" class="ltx_Math" alttext="\pi:S\to\nicefrac{{S}}{{\sim}}" display="inline"><mrow><mi>π</mi><mo>:</mo><mrow><mi>S</mi><mo>→</mo><mrow><mpadded depth="-0.3em" height="+0.3em" voffset="0.3em"><mi mathsize="70%">S</mi></mpadded><mpadded lspace="-0.1em" width="-0.15em"><mo stretchy="true">/</mo></mpadded><mo mathsize="70%" stretchy="false">∼</mo></mrow></mrow></mrow></math> defined by</p>
+<table id="S2.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex10.m1" class="ltx_Math" alttext="\pi(x)=[x]\quad\forall x\in S" display="block"><mrow><mrow><mrow><mi>π</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">[</mo><mi>x</mi><mo stretchy="false">]</mo></mrow></mrow><mo mathvariant="italic" separator="true"> </mo><mrow><mrow><mo>∀</mo><mi>x</mi></mrow><mo>∈</mo><mi>S</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">is said to be the <span class="ltx_text ltx_font_bold">natural projection</span> from <math id="S2.p10.m5" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> onto the factor set <math id="S2.p10.m6" class="ltx_Math" alttext="\nicefrac{{S}}{{\sim}}" display="inline"><mrow><mpadded depth="-0.3em" height="+0.3em" voffset="0.3em"><mi mathsize="70%">S</mi></mpadded><mpadded lspace="-0.1em" width="-0.15em"><mo stretchy="true">/</mo></mpadded><mo mathsize="70%" stretchy="false">∼</mo></mrow></math>.
+<br class="ltx_break"></p>
+</div>
+<div id="S2.p11" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Equivalence relation associated with a map:</span>
+Given <math id="S2.p11.m1" class="ltx_Math" alttext="f:S\to T" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>S</mi><mo>→</mo><mi>T</mi></mrow></mrow></math> where <math id="S2.p11.m2" class="ltx_Math" alttext="S,T" display="inline"><mrow><mi>S</mi><mo>,</mo><mi>T</mi></mrow></math> are nonempty sets, we can define an equivalence relation <math id="S2.p11.m3" class="ltx_Math" alttext="\sim_{f}" display="inline"><msub><mo>∼</mo><mi>f</mi></msub></math> on <math id="S2.p11.m4" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> by setting <math id="S2.p11.m5" class="ltx_Math" alttext="x\sim_{f}y" display="inline"><mrow><mi>x</mi><msub><mo>∼</mo><mi>f</mi></msub><mi>y</mi></mrow></math>
+if and only if <math id="S2.p11.m6" class="ltx_Math" alttext="f(x)=f(y)" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> for all <math id="S2.p11.m7" class="ltx_Math" alttext="x,y\in S" display="inline"><mrow><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow><mo>∈</mo><mi>S</mi></mrow></math>.</p>
+</div>
+<div id="Thmtheorem1" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Theorem 1</span></span></h6>
+<div id="Thmtheorem1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <math id="Thmtheorem1.p1.m1" class="ltx_Math" alttext="f:S\to T" display="inline"><mrow><mi>f</mi><mo mathvariant="normal">:</mo><mrow><mi>S</mi><mo mathvariant="normal">→</mo><mi>T</mi></mrow></mrow></math> be a function and suppose <math id="Thmtheorem1.p1.m2" class="ltx_Math" alttext="\sim_{f}" display="inline"><msub><mo mathvariant="normal">∼</mo><mi>f</mi></msub></math> is the equivalence relation defined above. Then the function
+<math id="Thmtheorem1.p1.m3" class="ltx_Math" alttext="\bar{f}:\nicefrac{{S}}{{\sim_{f}}}\to f(S)" display="inline"><mrow><mover accent="true"><mi>f</mi><mo mathvariant="normal" stretchy="false">¯</mo></mover><mo mathvariant="normal">:</mo><mrow><mrow><mpadded depth="-0.3em" height="+0.3em" voffset="0.3em"><mi mathsize="70%">S</mi></mpadded><mpadded lspace="-0.1em" width="-0.15em"><mo mathvariant="normal" stretchy="true">/</mo></mpadded><msub><mo mathsize="70%" mathvariant="normal" stretchy="false">∼</mo><mi mathsize="71%">f</mi></msub></mrow><mo mathvariant="normal">→</mo><mrow><mi>f</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>S</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></mrow></mrow></math> defined by</span></p>
+<table id="S2.Ex11" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex11.m1" class="ltx_Math" alttext="\bar{f}([x])=f(x)\quad\forall x\in S," display="block"><mrow><mrow><mrow><mrow><mover accent="true"><mi>f</mi><mo stretchy="false">¯</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo stretchy="false">[</mo><mi>x</mi><mo stretchy="false">]</mo></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo mathvariant="italic" separator="true"> </mo><mrow><mrow><mo>∀</mo><mi>x</mi></mrow><mo>∈</mo><mi>S</mi></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">is a bijection.</span></p>
+</div>
+</div>
+<div id="S2.p12" class="ltx_para">
+<p class="ltx_p">Given <math id="S2.p12.m1" class="ltx_Math" alttext="f:S\to T" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>S</mi><mo>→</mo><mi>T</mi></mrow></mrow></math> one may write</p>
+<table id="S2.Ex12" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex12.m1" class="ltx_Math" alttext="f=\iota\circ\bar{f}\circ\pi" display="block"><mrow><mi>f</mi><mo>=</mo><mrow><mi>ι</mi><mo>∘</mo><mover accent="true"><mi>f</mi><mo stretchy="false">¯</mo></mover><mo>∘</mo><mi>π</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="S2.p12.m2" class="ltx_Math" alttext="\iota:f(S)\to T" display="inline"><mrow><mi>ι</mi><mo>:</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>S</mi><mo stretchy="false">)</mo></mrow></mrow><mo>→</mo><mi>T</mi></mrow></mrow></math> is the inclusion and <math id="S2.p12.m3" class="ltx_Math" alttext="\pi:S\to\nicefrac{{S}}{{\sim_{f}}}" display="inline"><mrow><mi>π</mi><mo>:</mo><mrow><mi>S</mi><mo>→</mo><mrow><mpadded depth="-0.3em" height="+0.3em" voffset="0.3em"><mi mathsize="70%">S</mi></mpadded><mpadded lspace="-0.1em" width="-0.15em"><mo stretchy="true">/</mo></mpadded><msub><mo mathsize="70%" stretchy="false">∼</mo><mi mathsize="71%">f</mi></msub></mrow></mrow></mrow></math> is the natural projection. </p>
+</div>
+<figure id="S2.F1" class="ltx_figure"><span class="ltx_ERROR ltx_centering undefined">{tikzcd}</span>
+<p class="ltx_p ltx_align_center">[column sep=large]
+S <span class="ltx_ERROR undefined">\arrow</span>rf <span class="ltx_ERROR undefined">\arrow</span>d<span class="ltx_text ltx_font_italic">π</span> &amp; T</p>
+<p class="ltx_p ltx_align_center"><math id="S2.F1.m1" class="ltx_Math" alttext="\nicefrac{{S}}{{\sim_{f}}}" display="inline"><mrow><mpadded depth="-0.3em" height="+0.3em" voffset="0.3em"><mi mathsize="70%">S</mi></mpadded><mpadded lspace="-0.1em" width="-0.15em"><mo stretchy="true">/</mo></mpadded><msub><mo mathsize="70%" stretchy="false">∼</mo><mi mathsize="71%">f</mi></msub></mrow></math> <span class="ltx_ERROR undefined">\arrow</span>r¯f  f(S) <span class="ltx_ERROR undefined">\arrow</span>u<span class="ltx_text ltx_font_italic">ι</span></p>
+<figcaption class="ltx_caption"><span class="ltx_tag ltx_tag_figure">Figure 1: </span>Commutative diagram expressing <math id="S2.F1.m3" class="ltx_Math" alttext="f=\iota\circ\bar{f}\circ\pi" display="inline"><mrow><mi>f</mi><mo>=</mo><mrow><mi>ι</mi><mo>∘</mo><mover accent="true"><mi>f</mi><mo stretchy="false">¯</mo></mover><mo>∘</mo><mi>π</mi></mrow></mrow></math></figcaption>
+</figure>
+<div class="ltx_pagination ltx_role_newpage"></div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Tue Jan  6 14:57:23 2026 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>
