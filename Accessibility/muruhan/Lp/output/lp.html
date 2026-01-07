@@ -1,0 +1,806 @@
+<!DOCTYPE html><html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>L^p spaces</title>
+<!--Generated on Tue Jan  6 11:42:15 2026 by LaTeXML (version 0.8.6) http://dlmf.nist.gov/LaTeXML/.-->
+
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">
+<math id="m1" class="ltx_Math" alttext="L^{p}" display="inline"><msup><mi>L</mi><mi>p</mi></msup></math> spaces</h1>
+<div class="ltx_authors">
+<span class="ltx_creator ltx_role_author">
+<span class="ltx_personname">Muruhan Rathinam
+</span></span>
+</div>
+
+<section id="S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1 </span>Brief review of measure theory</h2>
+
+<div id="S1.p1" class="ltx_para">
+<p class="ltx_p">We assume familiarity with measure spaces and the Lebesgue integral. We briefly recall that given a nonempty set <math id="S1.p1.m1" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math>, a subset <math id="S1.p1.m2" class="ltx_Math" alttext="\Sigma\subset 2^{S}" display="inline"><mrow><mi mathvariant="normal">Σ</mi><mo>⊂</mo><msup><mn>2</mn><mi>S</mi></msup></mrow></math> of the power set of <math id="S1.p1.m3" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> is said to be a <math id="S1.p1.m4" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math>-algebra provided <math id="S1.p1.m5" class="ltx_Math" alttext="\emptyset\in\Sigma" display="inline"><mrow><mi mathvariant="normal">∅</mi><mo>∈</mo><mi mathvariant="normal">Σ</mi></mrow></math>, for each <math id="S1.p1.m6" class="ltx_Math" alttext="A\in\Sigma" display="inline"><mrow><mi>A</mi><mo>∈</mo><mi mathvariant="normal">Σ</mi></mrow></math>, <math id="S1.p1.m7" class="ltx_Math" alttext="A^{c}=S\setminus A\in\Sigma" display="inline"><mrow><msup><mi>A</mi><mi>c</mi></msup><mo>=</mo><mrow><mi>S</mi><mo>∖</mo><mi>A</mi></mrow><mo>∈</mo><mi mathvariant="normal">Σ</mi></mrow></math> and for each countable collection <math id="S1.p1.m8" class="ltx_Math" alttext="A_{n}" display="inline"><msub><mi>A</mi><mi>n</mi></msub></math> (<math id="S1.p1.m9" class="ltx_Math" alttext="n\in\mathbb{N}" display="inline"><mrow><mi>n</mi><mo>∈</mo><mi>ℕ</mi></mrow></math>) with <math id="S1.p1.m10" class="ltx_Math" alttext="A_{n}\in\Sigma" display="inline"><mrow><msub><mi>A</mi><mi>n</mi></msub><mo>∈</mo><mi mathvariant="normal">Σ</mi></mrow></math> for all <math id="S1.p1.m11" class="ltx_Math" alttext="n\in\mathbb{N}" display="inline"><mrow><mi>n</mi><mo>∈</mo><mi>ℕ</mi></mrow></math> it follows that <math id="S1.p1.m12" class="ltx_Math" alttext="\bigcup_{n}A_{n}\in\Sigma" display="inline"><mrow><mrow><msub><mo largeop="true" symmetric="true">⋃</mo><mi>n</mi></msub><msub><mi>A</mi><mi>n</mi></msub></mrow><mo>∈</mo><mi mathvariant="normal">Σ</mi></mrow></math>.</p>
+</div>
+<div id="S1.p2" class="ltx_para">
+<p class="ltx_p">Given a nonempty set <math id="S1.p2.m1" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math>, the power set <math id="S1.p2.m2" class="ltx_Math" alttext="2^{S}" display="inline"><msup><mn>2</mn><mi>S</mi></msup></math> is the largest <math id="S1.p2.m3" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math>-algebra on <math id="S1.p2.m4" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> and <math id="S1.p2.m5" class="ltx_Math" alttext="\{\emptyset,S\}" display="inline"><mrow><mo stretchy="false">{</mo><mi mathvariant="normal">∅</mi><mo>,</mo><mi>S</mi><mo stretchy="false">}</mo></mrow></math> is the smallest <math id="S1.p2.m6" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math>-algebra. The reason for not always working with the power set <math id="S1.p2.m7" class="ltx_Math" alttext="2^{S}" display="inline"><msup><mn>2</mn><mi>S</mi></msup></math> is that when <math id="S1.p2.m8" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> is an uncountable set it turns out that it may not be possible to define a “size” (measure) for every subset of <math id="S1.p2.m9" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> in a desirable manner.
+A critical example is <math id="S1.p2.m10" class="ltx_Math" alttext="S=\mathbb{R}" display="inline"><mrow><mi>S</mi><mo>=</mo><mi>ℝ</mi></mrow></math>. It is well known that
+it is not possible to define a “length” for every subset <math id="S1.p2.m11" class="ltx_Math" alttext="A\subset\mathbb{R}" display="inline"><mrow><mi>A</mi><mo>⊂</mo><mi>ℝ</mi></mrow></math> that extends the notion of length of bounded intervals of <math id="S1.p2.m12" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math> in a meaningful way.
+It turns out that we can define a length for a large class of subsets of <math id="S1.p2.m13" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math> in a meaningful way. One example of this large class is the Borel <math id="S1.p2.m14" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math>-algebra <math id="S1.p2.m15" class="ltx_Math" alttext="\mathbb{B}" display="inline"><mi>𝔹</mi></math>
+which is defined to be the intersection of all <math id="S1.p2.m16" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math>-algebras on <math id="S1.p2.m17" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math> that contain the collection of all open sets.</p>
+</div>
+<div id="S1.p3" class="ltx_para">
+<p class="ltx_p">A measure <math id="S1.p3.m1" class="ltx_Math" alttext="\mu" display="inline"><mi>μ</mi></math> on <math id="S1.p3.m2" class="ltx_Math" alttext="(S,\Sigma)" display="inline"><mrow><mo stretchy="false">(</mo><mi>S</mi><mo>,</mo><mi mathvariant="normal">Σ</mi><mo stretchy="false">)</mo></mrow></math> is a map <math id="S1.p3.m3" class="ltx_Math" alttext="\mu:\Sigma\to[0,\infty]" display="inline"><mrow><mi>μ</mi><mo>:</mo><mrow><mi mathvariant="normal">Σ</mi><mo>→</mo><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mi mathvariant="normal">∞</mi><mo stretchy="false">]</mo></mrow></mrow></mrow></math> that satisfies <math id="S1.p3.m4" class="ltx_Math" alttext="\mu(\emptyset)=0" display="inline"><mrow><mrow><mi>μ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">∅</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math> and</p>
+<table id="S1.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex1.m1" class="ltx_Math" alttext="\mu\left(\bigcup_{n}A_{n}\right)=\sum_{n}\mu(A_{n})" display="block"><mrow><mrow><mi>μ</mi><mo>⁢</mo><mrow><mo>(</mo><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">⋃</mo><mi>n</mi></munder><msub><mi>A</mi><mi>n</mi></msub></mrow><mo>)</mo></mrow></mrow><mo>=</mo><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mi>n</mi></munder><mrow><mi>μ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>A</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">for all sequences <math id="S1.p3.m5" class="ltx_Math" alttext="A_{n}\in\Sigma" display="inline"><mrow><msub><mi>A</mi><mi>n</mi></msub><mo>∈</mo><mi mathvariant="normal">Σ</mi></mrow></math> with <math id="S1.p3.m6" class="ltx_Math" alttext="A_{n}\cap A_{m}=\emptyset" display="inline"><mrow><mrow><msub><mi>A</mi><mi>n</mi></msub><mo>∩</mo><msub><mi>A</mi><mi>m</mi></msub></mrow><mo>=</mo><mi mathvariant="normal">∅</mi></mrow></math> whenever <math id="S1.p3.m7" class="ltx_Math" alttext="n\neq m" display="inline"><mrow><mi>n</mi><mo>≠</mo><mi>m</mi></mrow></math>.</p>
+</div>
+<div id="S1.p4" class="ltx_para">
+<p class="ltx_p">Let <math id="S1.p4.m1" class="ltx_Math" alttext="(S,\Sigma,\mu)" display="inline"><mrow><mo stretchy="false">(</mo><mi>S</mi><mo>,</mo><mi mathvariant="normal">Σ</mi><mo>,</mo><mi>μ</mi><mo stretchy="false">)</mo></mrow></math> be a <span class="ltx_text ltx_font_italic">measure space</span>.
+A function <math id="S1.p4.m2" class="ltx_Math" alttext="f:S\to\mathbb{R}" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>S</mi><mo>→</mo><mi>ℝ</mi></mrow></mrow></math> is said to be <span class="ltx_text ltx_font_italic">measurable</span>
+provided <math id="S1.p4.m3" class="ltx_Math" alttext="f^{-1}(E)\in\Sigma" display="inline"><mrow><mrow><msup><mi>f</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>E</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∈</mo><mi mathvariant="normal">Σ</mi></mrow></math> for each Borel set <math id="S1.p4.m4" class="ltx_Math" alttext="E\in\mathbb{B}" display="inline"><mrow><mi>E</mi><mo>∈</mo><mi>𝔹</mi></mrow></math>. The theory of Lebesgue integration provides for
+a way to define the integral
+</p>
+<table id="S1.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex2.m1" class="ltx_Math" alttext="\int_{A}f\,d\mu" display="block"><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>A</mi></msub><mrow><mpadded width="+1.7pt"><mi>f</mi></mpadded><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>μ</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">for every nonnegative and measurable function <math id="S1.p4.m5" class="ltx_Math" alttext="f:S\to[0,\infty)" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>S</mi><mo>→</mo><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mi mathvariant="normal">∞</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> where <math id="S1.p4.m6" class="ltx_Math" alttext="A\in\Sigma" display="inline"><mrow><mi>A</mi><mo>∈</mo><mi mathvariant="normal">Σ</mi></mrow></math>. The above integral may be <math id="S1.p4.m7" class="ltx_Math" alttext="\infty" display="inline"><mi mathvariant="normal">∞</mi></math>. Given a function <math id="S1.p4.m8" class="ltx_Math" alttext="f:S\to\mathbb{R}" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>S</mi><mo>→</mo><mi>ℝ</mi></mrow></mrow></math> we define
+the positive and negative parts <math id="S1.p4.m9" class="ltx_Math" alttext="f^{+}" display="inline"><msup><mi>f</mi><mo>+</mo></msup></math> and <math id="S1.p4.m10" class="ltx_Math" alttext="f^{-}" display="inline"><msup><mi>f</mi><mo>-</mo></msup></math> of <math id="S1.p4.m11" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math>
+by</p>
+<table id="S1.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex3.m1" class="ltx_Math" alttext="f^{+}(x)=\max\{f(x),0\},\quad f^{-}(x)=\max\{-f(x),0\}." display="block"><mrow><mrow><mrow><mrow><msup><mi>f</mi><mo>+</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>max</mi><mo>⁡</mo><mrow><mo stretchy="false">{</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mn>0</mn><mo stretchy="false">}</mo></mrow></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mrow><msup><mi>f</mi><mo>-</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>max</mi><mo>⁡</mo><mrow><mo stretchy="false">{</mo><mrow><mo>-</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>,</mo><mn>0</mn><mo stretchy="false">}</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">We note that <math id="S1.p4.m12" class="ltx_Math" alttext="f=f^{+}-f^{-}" display="inline"><mrow><mi>f</mi><mo>=</mo><mrow><msup><mi>f</mi><mo>+</mo></msup><mo>-</mo><msup><mi>f</mi><mo>-</mo></msup></mrow></mrow></math> and <math id="S1.p4.m13" class="ltx_Math" alttext="|f|=f^{+}+f^{-}" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mi>f</mi><mo stretchy="false">|</mo></mrow><mo>=</mo><mrow><msup><mi>f</mi><mo>+</mo></msup><mo>+</mo><msup><mi>f</mi><mo>-</mo></msup></mrow></mrow></math>.
+It turns out that if <math id="S1.p4.m14" class="ltx_Math" alttext="f:S\to\mathbb{R}" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>S</mi><mo>→</mo><mi>ℝ</mi></mrow></mrow></math> is measurable, then so are <math id="S1.p4.m15" class="ltx_Math" alttext="f^{+}" display="inline"><msup><mi>f</mi><mo>+</mo></msup></math> and <math id="S1.p4.m16" class="ltx_Math" alttext="f^{-}" display="inline"><msup><mi>f</mi><mo>-</mo></msup></math>. If</p>
+<table id="S1.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex4.m1" class="ltx_Math" alttext="\int_{S}|f|\,d\mu=\int_{S}(f^{+}+f^{-})\,d\mu&lt;\infty," display="block"><mrow><mrow><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>S</mi></msub><mrow><mrow><mo stretchy="false">|</mo><mi>f</mi><mo rspace="4.2pt" stretchy="false">|</mo></mrow><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>μ</mi></mrow></mrow></mrow><mo>=</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>S</mi></msub><mrow><mrow><mo stretchy="false">(</mo><mrow><msup><mi>f</mi><mo>+</mo></msup><mo>+</mo><msup><mi>f</mi><mo>-</mo></msup></mrow><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>μ</mi></mrow></mrow></mrow><mo>&lt;</mo><mi mathvariant="normal">∞</mi></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">then we say that <math id="S1.p4.m17" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is <span class="ltx_text ltx_font_italic">integrable</span> and define</p>
+<table id="S1.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex5.m1" class="ltx_Math" alttext="\int_{A}f\,d\mu=\int_{A}f^{+}\,d\mu-\int_{A}f^{-}\,d\mu." display="block"><mrow><mrow><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>A</mi></msub><mrow><mpadded width="+1.7pt"><mi>f</mi></mpadded><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>μ</mi></mrow></mrow></mrow><mo>=</mo><mrow><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>A</mi></msub><mrow><mpadded width="+1.7pt"><msup><mi>f</mi><mo>+</mo></msup></mpadded><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>μ</mi></mrow></mrow></mrow><mo>-</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>A</mi></msub><mrow><mpadded width="+1.7pt"><msup><mi>f</mi><mo>-</mo></msup></mpadded><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>μ</mi></mrow></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Note that we have avoided <math id="S1.p4.m18" class="ltx_Math" alttext="\infty-\infty" display="inline"><mrow><mi mathvariant="normal">∞</mi><mo>-</mo><mi mathvariant="normal">∞</mi></mrow></math>.</p>
+</div>
+<div id="S1.p5" class="ltx_para">
+<p class="ltx_p">Two measurable functions <math id="S1.p5.m1" class="ltx_Math" alttext="f,g:S\to\mathbb{R}" display="inline"><mrow><mrow><mi>f</mi><mo>,</mo><mi>g</mi></mrow><mo>:</mo><mrow><mi>S</mi><mo>→</mo><mi>ℝ</mi></mrow></mrow></math> are said to be <span class="ltx_text ltx_font_italic">equal almost everywhere</span> provided</p>
+<table id="S1.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex6.m1" class="ltx_Math" alttext="\mu\{x\in S\,|\,f(x)\neq g(x)\}=0." display="block"><mrow><mrow><mrow><mi>μ</mi><mo>⁢</mo><mrow><mo stretchy="false">{</mo><mrow><mi>x</mi><mo>∈</mo><mpadded width="+1.7pt"><mi>S</mi></mpadded></mrow><mo rspace="4.2pt" stretchy="false">|</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≠</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">}</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">We write this as
+</p>
+<table id="S1.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex7.m1" class="ltx_Math" alttext="f=g\;\text{a.e.}" display="block"><mrow><mi>f</mi><mo>=</mo><mrow><mpadded width="+2.8pt"><mi>g</mi></mpadded><mo>⁢</mo><mtext>a.e.</mtext></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">If <math id="S1.p5.m2" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is integrable and <math id="S1.p5.m3" class="ltx_Math" alttext="f=g" display="inline"><mrow><mi>f</mi><mo>=</mo><mi>g</mi></mrow></math> a.e. where <math id="S1.p5.m4" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> is also measurable, then</p>
+<table id="S1.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex8.m1" class="ltx_Math" alttext="\int_{A}f\,d\mu=\int_{A}g\,d\mu," display="block"><mrow><mrow><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>A</mi></msub><mrow><mpadded width="+1.7pt"><mi>f</mi></mpadded><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>μ</mi></mrow></mrow></mrow><mo>=</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>A</mi></msub><mrow><mpadded width="+1.7pt"><mi>g</mi></mpadded><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>μ</mi></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">for all <math id="S1.p5.m5" class="ltx_Math" alttext="A\in\Sigma" display="inline"><mrow><mi>A</mi><mo>∈</mo><mi mathvariant="normal">Σ</mi></mrow></math>. From the point of view of measure theory, the two functions <math id="S1.p5.m6" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> and <math id="S1.p5.m7" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> are the same,
+and hence we could “identify” them. This creates an equivalence relation. </p>
+</div>
+</section>
+<section id="S2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">2 </span><math id="S2.m1" class="ltx_Math" alttext="L^{p}" display="inline"><msup><mi>L</mi><mi>p</mi></msup></math> spaces</h2>
+
+<div id="S2.p1" class="ltx_para">
+<p class="ltx_p">For <math id="S2.p1.m1" class="ltx_Math" alttext="1\leq p&lt;\infty" display="inline"><mrow><mn>1</mn><mo>≤</mo><mi>p</mi><mo>&lt;</mo><mi mathvariant="normal">∞</mi></mrow></math> the space <math id="S2.p1.m2" class="ltx_Math" alttext="L^{p}(S,\Sigma,\mu)" display="inline"><mrow><msup><mi>L</mi><mi>p</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>S</mi><mo>,</mo><mi mathvariant="normal">Σ</mi><mo>,</mo><mi>μ</mi><mo stretchy="false">)</mo></mrow></mrow></math> is defined to be the
+set of equivalence classes of measurable functions <math id="S2.p1.m3" class="ltx_Math" alttext="[f]" display="inline"><mrow><mo stretchy="false">[</mo><mi>f</mi><mo stretchy="false">]</mo></mrow></math>
+such that</p>
+<table id="S2.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex9.m1" class="ltx_Math" alttext="\int_{S}|f|^{p}\,d\mu&lt;\infty." display="block"><mrow><mrow><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>S</mi></msub><mrow><mpadded width="+1.7pt"><msup><mrow><mo stretchy="false">|</mo><mi>f</mi><mo stretchy="false">|</mo></mrow><mi>p</mi></msup></mpadded><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>μ</mi></mrow></mrow></mrow><mo>&lt;</mo><mi mathvariant="normal">∞</mi></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Here <math id="S2.p1.m4" class="ltx_Math" alttext="[f]" display="inline"><mrow><mo stretchy="false">[</mo><mi>f</mi><mo stretchy="false">]</mo></mrow></math> denotes the equivalence class of <math id="S2.p1.m5" class="ltx_Math" alttext="f:S\to\mathbb{R}" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>S</mi><mo>→</mo><mi>ℝ</mi></mrow></mrow></math>.</p>
+</div>
+<div id="S2.p2" class="ltx_para">
+<p class="ltx_p">A measurable function <math id="S2.p2.m1" class="ltx_Math" alttext="f:S\to\mathbb{R}" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>S</mi><mo>→</mo><mi>ℝ</mi></mrow></mrow></math> is said to be <span class="ltx_text ltx_font_italic">essentially bounded</span> provided there exists a bounded function <math id="S2.p2.m2" class="ltx_Math" alttext="g:S\to\mathbb{R}" display="inline"><mrow><mi>g</mi><mo>:</mo><mrow><mi>S</mi><mo>→</mo><mi>ℝ</mi></mrow></mrow></math> (there exists <math id="S2.p2.m3" class="ltx_Math" alttext="M&gt;0" display="inline"><mrow><mi>M</mi><mo>&gt;</mo><mn>0</mn></mrow></math> such that <math id="S2.p2.m4" class="ltx_Math" alttext="|g(x)|\leq M" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mo>≤</mo><mi>M</mi></mrow></math> for all <math id="S2.p2.m5" class="ltx_Math" alttext="x\in S" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>S</mi></mrow></math>) such that <math id="S2.p2.m6" class="ltx_Math" alttext="f=g" display="inline"><mrow><mi>f</mi><mo>=</mo><mi>g</mi></mrow></math> a.e.
+Given an essentially bounded measurable function <math id="S2.p2.m7" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> we define the <span class="ltx_text ltx_font_italic">essential supremum</span> of <math id="S2.p2.m8" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> by</p>
+<table id="S2.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex10.m1" class="ltx_Math" alttext="\text{ess sup}f=\inf\{M&gt;0\,|\,f\leq M\,\text{a.e.}\}." display="block"><mrow><mrow><mrow><mtext>ess sup</mtext><mo>⁢</mo><mi>f</mi></mrow><mo>=</mo><mrow><mo movablelimits="false">inf</mo><mo>⁡</mo><mrow><mo stretchy="false">{</mo><mrow><mi>M</mi><mo>&gt;</mo><mpadded width="+1.7pt"><mn>0</mn></mpadded></mrow><mo rspace="4.2pt" stretchy="false">|</mo><mrow><mi>f</mi><mo>≤</mo><mrow><mpadded width="+1.7pt"><mi>M</mi></mpadded><mo>⁢</mo><mtext>a.e.</mtext></mrow></mrow><mo stretchy="false">}</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">We note that if <math id="S2.p2.m9" class="ltx_Math" alttext="f=g" display="inline"><mrow><mi>f</mi><mo>=</mo><mi>g</mi></mrow></math> a.e. where <math id="S2.p2.m10" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> and <math id="S2.p2.m11" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> are essentially bounded measurable functions then their essential suprema are equal. The space <math id="S2.p2.m12" class="ltx_Math" alttext="L^{\infty}(S,\Sigma,\mu)" display="inline"><mrow><msup><mi>L</mi><mi mathvariant="normal">∞</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>S</mi><mo>,</mo><mi mathvariant="normal">Σ</mi><mo>,</mo><mi>μ</mi><mo stretchy="false">)</mo></mrow></mrow></math> is defined to be the set of equivalence classes of functions that are essentially bounded.</p>
+</div>
+<div id="S2.p3" class="ltx_para">
+<p class="ltx_p">When the measure space <math id="S2.p3.m1" class="ltx_Math" alttext="(S,\Sigma,\mu)" display="inline"><mrow><mo stretchy="false">(</mo><mi>S</mi><mo>,</mo><mi mathvariant="normal">Σ</mi><mo>,</mo><mi>μ</mi><mo stretchy="false">)</mo></mrow></math> is clear from the context, we simply write <math id="S2.p3.m2" class="ltx_Math" alttext="L^{p}" display="inline"><msup><mi>L</mi><mi>p</mi></msup></math> in place of <math id="S2.p3.m3" class="ltx_Math" alttext="L^{p}(S,\Sigma,\mu)" display="inline"><mrow><msup><mi>L</mi><mi>p</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>S</mi><mo>,</mo><mi mathvariant="normal">Σ</mi><mo>,</mo><mi>μ</mi><mo stretchy="false">)</mo></mrow></mrow></math>.
+Having defined the <math id="S2.p3.m4" class="ltx_Math" alttext="L^{p}" display="inline"><msup><mi>L</mi><mi>p</mi></msup></math> for <math id="S2.p3.m5" class="ltx_Math" alttext="1\leq p\leq\infty" display="inline"><mrow><mn>1</mn><mo>≤</mo><mi>p</mi><mo>≤</mo><mi mathvariant="normal">∞</mi></mrow></math>,
+we first note that <math id="S2.p3.m6" class="ltx_Math" alttext="L^{p}" display="inline"><msup><mi>L</mi><mi>p</mi></msup></math> is a vector space over <math id="S2.p3.m7" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>.
+This is easy to establish and left as an exercise and
+we observe that the inequality</p>
+<table id="S2.Ex11" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex11.m1" class="ltx_Math" alttext="(a+b)^{p}\leq 2^{p}(a^{p}+b^{p})\quad\forall a,b,p\geq 0," display="block"><mrow><mrow><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow><mo stretchy="false">)</mo></mrow><mi>p</mi></msup><mo>≤</mo><mrow><mrow><msup><mn>2</mn><mi>p</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>a</mi><mi>p</mi></msup><mo>+</mo><msup><mi>b</mi><mi>p</mi></msup></mrow><mo stretchy="false">)</mo></mrow></mrow><mo mathvariant="italic" separator="true"> </mo><mrow><mo>∀</mo><mi>a</mi></mrow><mo>,</mo><mi>b</mi></mrow></mrow><mo>,</mo><mrow><mi>p</mi><mo>≥</mo><mn>0</mn></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">is useful.</p>
+</div>
+<div id="S2.p4" class="ltx_para">
+<p class="ltx_p">It turns out that we can define a norm on <math id="S2.p4.m1" class="ltx_Math" alttext="L^{p}" display="inline"><msup><mi>L</mi><mi>p</mi></msup></math> as follows. If <math id="S2.p4.m2" class="ltx_Math" alttext="f\in L^{p}" display="inline"><mrow><mi>f</mi><mo>∈</mo><msup><mi>L</mi><mi>p</mi></msup></mrow></math> for some <math id="S2.p4.m3" class="ltx_Math" alttext="p\in[1,\infty)" display="inline"><mrow><mi>p</mi><mo>∈</mo><mrow><mo stretchy="false">[</mo><mn>1</mn><mo>,</mo><mi mathvariant="normal">∞</mi><mo stretchy="false">)</mo></mrow></mrow></math> then</p>
+<table id="S2.Ex12" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex12.m1" class="ltx_Math" alttext="\|f\|_{p}=\left(\int_{S}|f|^{p}\,d\mu\right)^{\frac{1}{p}}" display="block"><mrow><msub><mrow><mo>∥</mo><mi>f</mi><mo>∥</mo></mrow><mi>p</mi></msub><mo>=</mo><msup><mrow><mo>(</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>S</mi></msub><mrow><mpadded width="+1.7pt"><msup><mrow><mo stretchy="false">|</mo><mi>f</mi><mo stretchy="false">|</mo></mrow><mi>p</mi></msup></mpadded><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>μ</mi></mrow></mrow></mrow><mo>)</mo></mrow><mfrac><mn>1</mn><mi>p</mi></mfrac></msup></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">defines a norm on <math id="S2.p4.m4" class="ltx_Math" alttext="L^{p}" display="inline"><msup><mi>L</mi><mi>p</mi></msup></math>. If <math id="S2.p4.m5" class="ltx_Math" alttext="f\in L^{\infty}" display="inline"><mrow><mi>f</mi><mo>∈</mo><msup><mi>L</mi><mi mathvariant="normal">∞</mi></msup></mrow></math></p>
+<table id="S2.Ex13" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex13.m1" class="ltx_Math" alttext="\|f\|_{\infty}=\text{ess sup}|f|" display="block"><mrow><msub><mrow><mo>∥</mo><mi>f</mi><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi></msub><mo>=</mo><mrow><mtext>ess sup</mtext><mo>⁢</mo><mrow><mo stretchy="false">|</mo><mi>f</mi><mo stretchy="false">|</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">defines a norm on <math id="S2.p4.m6" class="ltx_Math" alttext="L^{\infty}" display="inline"><msup><mi>L</mi><mi mathvariant="normal">∞</mi></msup></math>.</p>
+</div>
+<div id="S2.p5" class="ltx_para">
+<p class="ltx_p">Recall that a norm <math id="S2.p5.m1" class="ltx_Math" alttext="\|.\|" display="inline"><mrow><mo>∥</mo><mo>.</mo><mo>∥</mo></mrow></math> on a vector space <math id="S2.p5.m2" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> over <math id="S2.p5.m3" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math> satisfies nonnegativity (<math id="S2.p5.m4" class="ltx_Math" alttext="\|v\|\geq 0" display="inline"><mrow><mrow><mo>∥</mo><mi>v</mi><mo>∥</mo></mrow><mo>≥</mo><mn>0</mn></mrow></math>), positive definiteness (<math id="S2.p5.m5" class="ltx_Math" alttext="\|v\|=0" display="inline"><mrow><mrow><mo>∥</mo><mi>v</mi><mo>∥</mo></mrow><mo>=</mo><mn>0</mn></mrow></math> if and only if <math id="S2.p5.m6" class="ltx_Math" alttext="v=0" display="inline"><mrow><mi>v</mi><mo>=</mo><mn>0</mn></mrow></math>), homogeneity (<math id="S2.p5.m7" class="ltx_Math" alttext="\|\alpha v\|=|\alpha|\|v\|" display="inline"><mrow><mrow><mo>∥</mo><mrow><mi>α</mi><mo>⁢</mo><mi>v</mi></mrow><mo>∥</mo></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">|</mo><mi>α</mi><mo stretchy="false">|</mo></mrow><mo>⁢</mo><mrow><mo>∥</mo><mi>v</mi><mo>∥</mo></mrow></mrow></mrow></math>) and the triangle inequality (<math id="S2.p5.m8" class="ltx_Math" alttext="\|u+v\|\leq\|u\|+\|v\|" display="inline"><mrow><mrow><mo>∥</mo><mrow><mi>u</mi><mo>+</mo><mi>v</mi></mrow><mo>∥</mo></mrow><mo>≤</mo><mrow><mrow><mo>∥</mo><mi>u</mi><mo>∥</mo></mrow><mo>+</mo><mrow><mo>∥</mo><mi>v</mi><mo>∥</mo></mrow></mrow></mrow></math>). Nonnegativity and homogeneity are easy to establish. Positive definiteness is established via measure theoretic considerations. In the case of <math id="S2.p5.m9" class="ltx_Math" alttext="p=1" display="inline"><mrow><mi>p</mi><mo>=</mo><mn>1</mn></mrow></math>, the triangle inequality follows from
+triangle inequality of real numbers and monotonicity of Lebesgue integrals (<math id="S2.p5.m10" class="ltx_Math" alttext="f\leq g" display="inline"><mrow><mi>f</mi><mo>≤</mo><mi>g</mi></mrow></math> implies <math id="S2.p5.m11" class="ltx_Math" alttext="\int_{S}fd\mu\leq\int_{S}gd\mu" display="inline"><mrow><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>S</mi></msub><mrow><mi>f</mi><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>μ</mi></mrow></mrow></mrow><mo>≤</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>S</mi></msub><mrow><mi>g</mi><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>μ</mi></mrow></mrow></mrow></mrow></math>). In the case of <math id="S2.p5.m12" class="ltx_Math" alttext="p=\infty" display="inline"><mrow><mi>p</mi><mo>=</mo><mi mathvariant="normal">∞</mi></mrow></math>, the triangle inequality follows from the triangle inequality for real numbers and properties of suprema. Establishing the triangle inequality for the case of <math id="S2.p5.m13" class="ltx_Math" alttext="1&lt;p&lt;\infty" display="inline"><mrow><mn>1</mn><mo>&lt;</mo><mi>p</mi><mo>&lt;</mo><mi mathvariant="normal">∞</mi></mrow></math> is more involved. In fact it is known as the  em Minkowski inequality and we shall establish it by first proving certain important inequalities.</p>
+</div>
+<div id="S2.p6" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Conjugates:</span> Let <math id="S2.p6.m1" class="ltx_Math" alttext="1&lt;p&lt;\infty" display="inline"><mrow><mn>1</mn><mo>&lt;</mo><mi>p</mi><mo>&lt;</mo><mi mathvariant="normal">∞</mi></mrow></math>. Then the <span class="ltx_text ltx_font_italic">conjugate</span> of <math id="S2.p6.m2" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math>
+is the unique number <math id="S2.p6.m3" class="ltx_Math" alttext="1&lt;q&lt;\infty" display="inline"><mrow><mn>1</mn><mo>&lt;</mo><mi>q</mi><mo>&lt;</mo><mi mathvariant="normal">∞</mi></mrow></math> that satisfies
+<math id="S2.p6.m4" class="ltx_Math" alttext="1/p+1/q=1" display="inline"><mrow><mrow><mrow><mn>1</mn><mo>/</mo><mi>p</mi></mrow><mo>+</mo><mrow><mn>1</mn><mo>/</mo><mi>q</mi></mrow></mrow><mo>=</mo><mn>1</mn></mrow></math>. Moreover, the conjugate of <math id="S2.p6.m5" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math> is defined to be <math id="S2.p6.m6" class="ltx_Math" alttext="\infty" display="inline"><mi mathvariant="normal">∞</mi></math> and that of <math id="S2.p6.m7" class="ltx_Math" alttext="\infty" display="inline"><mi mathvariant="normal">∞</mi></math> is defined to be <math id="S2.p6.m8" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math>. Thus being conjugates is a symmetric relationship.</p>
+</div>
+</section>
+<section id="S3" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">3 </span>Important inequalities</h2>
+
+<div id="S3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Young’s inequality:</span> Let <math id="S3.p1.m1" class="ltx_Math" alttext="1&lt;p&lt;\infty" display="inline"><mrow><mn>1</mn><mo>&lt;</mo><mi>p</mi><mo>&lt;</mo><mi mathvariant="normal">∞</mi></mrow></math> and <math id="S3.p1.m2" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> be the conjugate of <math id="S3.p1.m3" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math>. Then for <math id="S3.p1.m4" class="ltx_Math" alttext="a,b\geq 0" display="inline"><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo>≥</mo><mn>0</mn></mrow></math></p>
+<table id="S3.Ex14" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex14.m1" class="ltx_Math" alttext="ab\leq\frac{a^{p}}{p}+\frac{b^{q}}{q}." display="block"><mrow><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>b</mi></mrow><mo>≤</mo><mrow><mfrac><msup><mi>a</mi><mi>p</mi></msup><mi>p</mi></mfrac><mo>+</mo><mfrac><msup><mi>b</mi><mi>q</mi></msup><mi>q</mi></mfrac></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S3.p2" class="ltx_para">
+<p class="ltx_p">Before we state the Holder’s inequality, we define the function <math id="S3.p2.m1" class="ltx_Math" alttext="\text{sgn}:\mathbb{R}\to\mathbb{R}" display="inline"><mrow><mtext>sgn</mtext><mo>:</mo><mrow><mi>ℝ</mi><mo>→</mo><mi>ℝ</mi></mrow></mrow></math> by <math id="S3.p2.m2" class="ltx_Math" alttext="\text{sgn}(x)=1" display="inline"><mrow><mrow><mtext>sgn</mtext><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>1</mn></mrow></math> for <math id="S3.p2.m3" class="ltx_Math" alttext="x\geq 0" display="inline"><mrow><mi>x</mi><mo>≥</mo><mn>0</mn></mrow></math> and <math id="S3.p2.m4" class="ltx_Math" alttext="\text{sgn}(x)=-1" display="inline"><mrow><mrow><mtext>sgn</mtext><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>-</mo><mn>1</mn></mrow></mrow></math> for <math id="S3.p2.m5" class="ltx_Math" alttext="x&lt;0" display="inline"><mrow><mi>x</mi><mo>&lt;</mo><mn>0</mn></mrow></math>.</p>
+</div>
+<div id="Thmtheorem1" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Theorem 1</span></span><span class="ltx_text ltx_font_bold"> </span>(Holder’s inequality)</h6>
+<div id="Thmtheorem1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <math id="Thmtheorem1.p1.m1" class="ltx_Math" alttext="1\leq p&lt;\infty" display="inline"><mrow><mn mathvariant="normal">1</mn><mo mathvariant="normal">≤</mo><mi>p</mi><mo mathvariant="normal">&lt;</mo><mi mathvariant="normal">∞</mi></mrow></math> and <math id="Thmtheorem1.p1.m2" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> be the conjugate of <math id="Thmtheorem1.p1.m3" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math>.
+Let <math id="Thmtheorem1.p1.m4" class="ltx_Math" alttext="f\in L^{p}(S,\Sigma,\mu)" display="inline"><mrow><mi>f</mi><mo mathvariant="normal">∈</mo><mrow><msup><mi>L</mi><mi>p</mi></msup><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>S</mi><mo mathvariant="normal">,</mo><mi mathvariant="normal">Σ</mi><mo mathvariant="normal">,</mo><mi>μ</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></mrow></math> and <math id="Thmtheorem1.p1.m5" class="ltx_Math" alttext="g\in L^{q}(S,\Sigma,\mu)" display="inline"><mrow><mi>g</mi><mo mathvariant="normal">∈</mo><mrow><msup><mi>L</mi><mi>q</mi></msup><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>S</mi><mo mathvariant="normal">,</mo><mi mathvariant="normal">Σ</mi><mo mathvariant="normal">,</mo><mi>μ</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></mrow></math>. Then <math id="Thmtheorem1.p1.m6" class="ltx_Math" alttext="fg" display="inline"><mrow><mi>f</mi><mo mathvariant="italic">⁢</mo><mi>g</mi></mrow></math> is integrable
+and</span></p>
+<table id="S3.Ex15" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex15.m1" class="ltx_Math" alttext="\int_{S}|fg|\,d\mu\leq\|f\|_{p}\|g\|_{q}." display="block"><mrow><mrow><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>S</mi></msub><mrow><mrow><mo stretchy="false">|</mo><mrow><mi>f</mi><mo>⁢</mo><mi>g</mi></mrow><mo rspace="4.2pt" stretchy="false">|</mo></mrow><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>μ</mi></mrow></mrow></mrow><mo>≤</mo><mrow><msub><mrow><mo>∥</mo><mi>f</mi><mo>∥</mo></mrow><mi>p</mi></msub><mo>⁢</mo><msub><mrow><mo>∥</mo><mi>g</mi><mo>∥</mo></mrow><mi>q</mi></msub></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If <math id="Thmtheorem1.p1.m7" class="ltx_Math" alttext="f\neq 0" display="inline"><mrow><mi>f</mi><mo mathvariant="normal">≠</mo><mn mathvariant="normal">0</mn></mrow></math>, the function <math id="Thmtheorem1.p1.m8" class="ltx_Math" alttext="f^{*}:S\to\mathbb{R}" display="inline"><mrow><msup><mi>f</mi><mo mathvariant="normal">*</mo></msup><mo mathvariant="normal">:</mo><mrow><mi>S</mi><mo mathvariant="normal">→</mo><mi>ℝ</mi></mrow></mrow></math> defined by</span></p>
+<table id="S3.Ex16" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex16.m1" class="ltx_Math" alttext="f^{*}(x)=\|f\|_{p}^{1-p}\,\text{sgn}(f(x))\,|f(x)|^{p-1}" display="block"><mrow><mrow><msup><mi>f</mi><mo>*</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mpadded width="+1.7pt"><msubsup><mrow><mo>∥</mo><mi>f</mi><mo>∥</mo></mrow><mi>p</mi><mrow><mn>1</mn><mo>-</mo><mi>p</mi></mrow></msubsup></mpadded><mo>⁢</mo><mtext>𝑠𝑔𝑛</mtext><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mrow><mo stretchy="false">|</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mrow><mi>p</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">belongs to <math id="Thmtheorem1.p1.m9" class="ltx_Math" alttext="L^{q}" display="inline"><msup><mi>L</mi><mi>q</mi></msup></math>,</span></p>
+<table id="S3.Ex17" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex17.m1" class="ltx_Math" alttext="\int_{S}f\,f^{*}\,d\mu=\|f\|_{p}," display="block"><mrow><mrow><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>S</mi></msub><mrow><mpadded width="+1.7pt"><mi>f</mi></mpadded><mo>⁢</mo><mpadded width="+1.7pt"><msup><mi>f</mi><mo>*</mo></msup></mpadded><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>μ</mi></mrow></mrow></mrow><mo>=</mo><msub><mrow><mo>∥</mo><mi>f</mi><mo>∥</mo></mrow><mi>p</mi></msub></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">and <math id="Thmtheorem1.p1.m10" class="ltx_Math" alttext="\|f^{*}\|_{q}=1" display="inline"><mrow><msub><mrow><mo mathvariant="normal">∥</mo><msup><mi>f</mi><mo mathvariant="normal">*</mo></msup><mo mathvariant="normal">∥</mo></mrow><mi>q</mi></msub><mo mathvariant="normal">=</mo><mn mathvariant="normal">1</mn></mrow></math>.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="S3.p3" class="ltx_para">
+<p class="ltx_p">First we consider the case of <math id="S3.p3.m1" class="ltx_Math" alttext="p=1" display="inline"><mrow><mi>p</mi><mo>=</mo><mn>1</mn></mrow></math>. Then <math id="S3.p3.m2" class="ltx_Math" alttext="q=\infty" display="inline"><mrow><mi>q</mi><mo>=</mo><mi mathvariant="normal">∞</mi></mrow></math>.
+If <math id="S3.p3.m3" class="ltx_Math" alttext="f\in L^{1}" display="inline"><mrow><mi>f</mi><mo>∈</mo><msup><mi>L</mi><mn>1</mn></msup></mrow></math> and <math id="S3.p3.m4" class="ltx_Math" alttext="g\in L^{\infty}" display="inline"><mrow><mi>g</mi><mo>∈</mo><msup><mi>L</mi><mi mathvariant="normal">∞</mi></msup></mrow></math> then <math id="S3.p3.m5" class="ltx_Math" alttext="|g|\leq\|g\|_{\infty}" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mi>g</mi><mo stretchy="false">|</mo></mrow><mo>≤</mo><msub><mrow><mo>∥</mo><mi>g</mi><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi></msub></mrow></math> a.e. Thus</p>
+<table id="S3.Ex18" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex18.m1" class="ltx_Math" alttext="\int_{S}|fg|\,d\mu\leq\|g\|_{\infty}\int_{S}|f|\,d\mu=\|g\|_{\infty}\|f\|_{1}." display="block"><mrow><mrow><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>S</mi></msub><mrow><mrow><mo stretchy="false">|</mo><mrow><mi>f</mi><mo>⁢</mo><mi>g</mi></mrow><mo rspace="4.2pt" stretchy="false">|</mo></mrow><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>μ</mi></mrow></mrow></mrow><mo>≤</mo><mrow><msub><mrow><mo>∥</mo><mi>g</mi><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi></msub><mo>⁢</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>S</mi></msub><mrow><mrow><mo stretchy="false">|</mo><mi>f</mi><mo rspace="4.2pt" stretchy="false">|</mo></mrow><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>μ</mi></mrow></mrow></mrow></mrow><mo>=</mo><mrow><msub><mrow><mo>∥</mo><mi>g</mi><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi></msub><mo>⁢</mo><msub><mrow><mo>∥</mo><mi>f</mi><mo>∥</mo></mrow><mn>1</mn></msub></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Moreover <math id="S3.p3.m6" class="ltx_Math" alttext="f^{*}=\text{sgn}(f)" display="inline"><mrow><msup><mi>f</mi><mo>*</mo></msup><mo>=</mo><mrow><mtext>sgn</mtext><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>f</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, so <math id="S3.p3.m7" class="ltx_Math" alttext="f\,f^{*}=|f|" display="inline"><mrow><mrow><mpadded width="+1.7pt"><mi>f</mi></mpadded><mo>⁢</mo><msup><mi>f</mi><mo>*</mo></msup></mrow><mo>=</mo><mrow><mo stretchy="false">|</mo><mi>f</mi><mo stretchy="false">|</mo></mrow></mrow></math>. Thus</p>
+<table id="S3.Ex19" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex19.m1" class="ltx_Math" alttext="\int_{S}f\,f^{*}\,d\mu=\int_{S}|f|\,d\mu=\|f\|_{1}" display="block"><mrow><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>S</mi></msub><mrow><mpadded width="+1.7pt"><mi>f</mi></mpadded><mo>⁢</mo><mpadded width="+1.7pt"><msup><mi>f</mi><mo>*</mo></msup></mpadded><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>μ</mi></mrow></mrow></mrow><mo>=</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>S</mi></msub><mrow><mrow><mo stretchy="false">|</mo><mi>f</mi><mo rspace="4.2pt" stretchy="false">|</mo></mrow><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>μ</mi></mrow></mrow></mrow><mo>=</mo><msub><mrow><mo>∥</mo><mi>f</mi><mo>∥</mo></mrow><mn>1</mn></msub></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and since <math id="S3.p3.m8" class="ltx_Math" alttext="|f^{*}|=1" display="inline"><mrow><mrow><mo stretchy="false">|</mo><msup><mi>f</mi><mo>*</mo></msup><mo stretchy="false">|</mo></mrow><mo>=</mo><mn>1</mn></mrow></math>, it also follows that <math id="S3.p3.m9" class="ltx_Math" alttext="\|f^{*}\|_{\infty}=1" display="inline"><mrow><msub><mrow><mo>∥</mo><msup><mi>f</mi><mo>*</mo></msup><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi></msub><mo>=</mo><mn>1</mn></mrow></math>. This proves the <math id="S3.p3.m10" class="ltx_Math" alttext="p=1" display="inline"><mrow><mi>p</mi><mo>=</mo><mn>1</mn></mrow></math> case.</p>
+</div>
+<div id="S3.p4" class="ltx_para">
+<p class="ltx_p">Let <math id="S3.p4.m1" class="ltx_Math" alttext="1&lt;p&lt;\infty" display="inline"><mrow><mn>1</mn><mo>&lt;</mo><mi>p</mi><mo>&lt;</mo><mi mathvariant="normal">∞</mi></mrow></math>. Then if <math id="S3.p4.m2" class="ltx_Math" alttext="f=0" display="inline"><mrow><mi>f</mi><mo>=</mo><mn>0</mn></mrow></math> or <math id="S3.p4.m3" class="ltx_Math" alttext="g=0" display="inline"><mrow><mi>g</mi><mo>=</mo><mn>0</mn></mrow></math> the inequality holds trivially. Thus it suffices to suppose <math id="S3.p4.m4" class="ltx_Math" alttext="f\neq 0" display="inline"><mrow><mi>f</mi><mo>≠</mo><mn>0</mn></mrow></math> and <math id="S3.p4.m5" class="ltx_Math" alttext="g\neq 0" display="inline"><mrow><mi>g</mi><mo>≠</mo><mn>0</mn></mrow></math>.
+We first consider the case <math id="S3.p4.m6" class="ltx_Math" alttext="\|f\|_{p}=\|g\|_{q}=1" display="inline"><mrow><msub><mrow><mo>∥</mo><mi>f</mi><mo>∥</mo></mrow><mi>p</mi></msub><mo>=</mo><msub><mrow><mo>∥</mo><mi>g</mi><mo>∥</mo></mrow><mi>q</mi></msub><mo>=</mo><mn>1</mn></mrow></math>.
+By Young’s inequality</p>
+<table id="S3.Ex20" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex20.m1" class="ltx_Math" alttext="|fg|\leq\frac{|f|^{p}}{p}+\frac{|g|^{q}}{q}." display="block"><mrow><mrow><mrow><mo stretchy="false">|</mo><mrow><mi>f</mi><mo>⁢</mo><mi>g</mi></mrow><mo stretchy="false">|</mo></mrow><mo>≤</mo><mrow><mfrac><msup><mrow><mo stretchy="false">|</mo><mi>f</mi><mo stretchy="false">|</mo></mrow><mi>p</mi></msup><mi>p</mi></mfrac><mo>+</mo><mfrac><msup><mrow><mo stretchy="false">|</mo><mi>g</mi><mo stretchy="false">|</mo></mrow><mi>q</mi></msup><mi>q</mi></mfrac></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">By monotonicity of the integral</p>
+<table id="S3.Ex21" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex21.m1" class="ltx_Math" alttext="\int_{S}|fg|\,d\mu\leq\int_{S}\left(\frac{|f|^{p}}{p}+\frac{|g|^{q}}{q}\right)%
+\,d\mu=\frac{\|f\|_{p}^{p}}{p}+\frac{\|g\|^{q}_{q}}{q}=\frac{1}{p}+\frac{1}{q}%
+=1." display="block"><mrow><mrow><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>S</mi></msub><mrow><mrow><mo stretchy="false">|</mo><mrow><mi>f</mi><mo>⁢</mo><mi>g</mi></mrow><mo rspace="4.2pt" stretchy="false">|</mo></mrow><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>μ</mi></mrow></mrow></mrow><mo>≤</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>S</mi></msub><mrow><mrow><mo>(</mo><mrow><mfrac><msup><mrow><mo stretchy="false">|</mo><mi>f</mi><mo stretchy="false">|</mo></mrow><mi>p</mi></msup><mi>p</mi></mfrac><mo>+</mo><mfrac><msup><mrow><mo stretchy="false">|</mo><mi>g</mi><mo stretchy="false">|</mo></mrow><mi>q</mi></msup><mi>q</mi></mfrac></mrow><mo rspace="4.2pt">)</mo></mrow><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>μ</mi></mrow></mrow></mrow><mo>=</mo><mrow><mfrac><msubsup><mrow><mo>∥</mo><mi>f</mi><mo>∥</mo></mrow><mi>p</mi><mi>p</mi></msubsup><mi>p</mi></mfrac><mo>+</mo><mfrac><msubsup><mrow><mo>∥</mo><mi>g</mi><mo>∥</mo></mrow><mi>q</mi><mi>q</mi></msubsup><mi>q</mi></mfrac></mrow><mo>=</mo><mrow><mfrac><mn>1</mn><mi>p</mi></mfrac><mo>+</mo><mfrac><mn>1</mn><mi>q</mi></mfrac></mrow><mo>=</mo><mn>1</mn></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Thus the Holder’s inequality is proven for <math id="S3.p4.m7" class="ltx_Math" alttext="\|f\|_{p}=\|g\|_{q}=1" display="inline"><mrow><msub><mrow><mo>∥</mo><mi>f</mi><mo>∥</mo></mrow><mi>p</mi></msub><mo>=</mo><msub><mrow><mo>∥</mo><mi>g</mi><mo>∥</mo></mrow><mi>q</mi></msub><mo>=</mo><mn>1</mn></mrow></math> case. For general <math id="S3.p4.m8" class="ltx_Math" alttext="f\neq 0" display="inline"><mrow><mi>f</mi><mo>≠</mo><mn>0</mn></mrow></math> and <math id="S3.p4.m9" class="ltx_Math" alttext="g\neq 0" display="inline"><mrow><mi>g</mi><mo>≠</mo><mn>0</mn></mrow></math> we apply the above result to <math id="S3.p4.m10" class="ltx_Math" alttext="f/\|f\|_{p}" display="inline"><mrow><mi>f</mi><mo>/</mo><msub><mrow><mo>∥</mo><mi>f</mi><mo>∥</mo></mrow><mi>p</mi></msub></mrow></math> and
+<math id="S3.p4.m11" class="ltx_Math" alttext="g/\|g\|_{q}" display="inline"><mrow><mi>g</mi><mo>/</mo><msub><mrow><mo>∥</mo><mi>g</mi><mo>∥</mo></mrow><mi>q</mi></msub></mrow></math> to obtain</p>
+<table id="S3.Ex22" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex22.m1" class="ltx_Math" alttext="\frac{\int_{S}|fg|\,d\mu}{\|f\|_{p}\|g\|_{q}}\leq 1." display="block"><mrow><mrow><mfrac><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>S</mi></msub><mrow><mrow><mo stretchy="false">|</mo><mrow><mi>f</mi><mo>⁢</mo><mi>g</mi></mrow><mo rspace="4.2pt" stretchy="false">|</mo></mrow><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>μ</mi></mrow></mrow></mrow><mrow><msub><mrow><mo>∥</mo><mi>f</mi><mo>∥</mo></mrow><mi>p</mi></msub><mo>⁢</mo><msub><mrow><mo>∥</mo><mi>g</mi><mo>∥</mo></mrow><mi>q</mi></msub></mrow></mfrac><mo>≤</mo><mn>1</mn></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Multiplying by <math id="S3.p4.m12" class="ltx_Math" alttext="\|f\|_{p}\|g\|_{q}" display="inline"><mrow><msub><mrow><mo>∥</mo><mi>f</mi><mo>∥</mo></mrow><mi>p</mi></msub><mo>⁢</mo><msub><mrow><mo>∥</mo><mi>g</mi><mo>∥</mo></mrow><mi>q</mi></msub></mrow></math> implies the result.</p>
+</div>
+<div id="S3.p5" class="ltx_para">
+<p class="ltx_p">Now, from the definition of <math id="S3.p5.m1" class="ltx_Math" alttext="f^{*}" display="inline"><msup><mi>f</mi><mo>*</mo></msup></math>, it follows that</p>
+<table id="S3.Ex23" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex23.m1" class="ltx_Math" alttext="f\,f^{*}=\|f\|_{p}^{1-p}\,|f|^{p}," display="block"><mrow><mrow><mrow><mpadded width="+1.7pt"><mi>f</mi></mpadded><mo>⁢</mo><msup><mi>f</mi><mo>*</mo></msup></mrow><mo>=</mo><mrow><mpadded width="+1.7pt"><msubsup><mrow><mo>∥</mo><mi>f</mi><mo>∥</mo></mrow><mi>p</mi><mrow><mn>1</mn><mo>-</mo><mi>p</mi></mrow></msubsup></mpadded><mo>⁢</mo><msup><mrow><mo stretchy="false">|</mo><mi>f</mi><mo stretchy="false">|</mo></mrow><mi>p</mi></msup></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and hence</p>
+<table id="S3.Ex24" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex24.m1" class="ltx_Math" alttext="\int_{S}f\,f^{*}\,d\mu=\|f\|_{p}^{(1-p)+p}=\|f\|_{p}." display="block"><mrow><mrow><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>S</mi></msub><mrow><mpadded width="+1.7pt"><mi>f</mi></mpadded><mo>⁢</mo><mpadded width="+1.7pt"><msup><mi>f</mi><mo>*</mo></msup></mpadded><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>μ</mi></mrow></mrow></mrow><mo>=</mo><msubsup><mrow><mo>∥</mo><mi>f</mi><mo>∥</mo></mrow><mi>p</mi><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mi>p</mi></mrow><mo stretchy="false">)</mo></mrow><mo>+</mo><mi>p</mi></mrow></msubsup><mo>=</mo><msub><mrow><mo>∥</mo><mi>f</mi><mo>∥</mo></mrow><mi>p</mi></msub></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Moreover, since <math id="S3.p5.m2" class="ltx_Math" alttext="|f^{*}|=\|f\|_{p}^{1-p}|f|^{p-1}" display="inline"><mrow><mrow><mo stretchy="false">|</mo><msup><mi>f</mi><mo>*</mo></msup><mo stretchy="false">|</mo></mrow><mo>=</mo><mrow><msubsup><mrow><mo>∥</mo><mi>f</mi><mo>∥</mo></mrow><mi>p</mi><mrow><mn>1</mn><mo>-</mo><mi>p</mi></mrow></msubsup><mo>⁢</mo><msup><mrow><mo stretchy="false">|</mo><mi>f</mi><mo stretchy="false">|</mo></mrow><mrow><mi>p</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow></mrow></math>, we have that</p>
+<table id="S3.Ex25" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex25.m1" class="ltx_Math" alttext="|f^{*}|^{q}=\|f\|_{p}^{q(1-p)}\,|f|^{q(p-1)}." display="block"><mrow><mrow><msup><mrow><mo stretchy="false">|</mo><msup><mi>f</mi><mo>*</mo></msup><mo stretchy="false">|</mo></mrow><mi>q</mi></msup><mo>=</mo><mrow><mpadded width="+1.7pt"><msubsup><mrow><mo>∥</mo><mi>f</mi><mo>∥</mo></mrow><mi>p</mi><mrow><mi>q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mi>p</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></msubsup></mpadded><mo>⁢</mo><msup><mrow><mo stretchy="false">|</mo><mi>f</mi><mo stretchy="false">|</mo></mrow><mrow><mi>q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>p</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></msup></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Noting that <math id="S3.p5.m3" class="ltx_Math" alttext="q(p-1)=p" display="inline"><mrow><mrow><mi>q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>p</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>p</mi></mrow></math>, we conclude that</p>
+<table id="S3.Ex26" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex26.m1" class="ltx_Math" alttext="\int_{S}|f^{*}|^{q}\,d\mu=\|f\|_{p}^{-p}\|f\|_{p}^{p}=1." display="block"><mrow><mrow><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>S</mi></msub><mrow><mpadded width="+1.7pt"><msup><mrow><mo stretchy="false">|</mo><msup><mi>f</mi><mo>*</mo></msup><mo stretchy="false">|</mo></mrow><mi>q</mi></msup></mpadded><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>μ</mi></mrow></mrow></mrow><mo>=</mo><mrow><msubsup><mrow><mo>∥</mo><mi>f</mi><mo>∥</mo></mrow><mi>p</mi><mrow><mo>-</mo><mi>p</mi></mrow></msubsup><mo>⁢</mo><msubsup><mrow><mo>∥</mo><mi>f</mi><mo>∥</mo></mrow><mi>p</mi><mi>p</mi></msubsup></mrow><mo>=</mo><mn>1</mn></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Thus <math id="S3.p5.m4" class="ltx_Math" alttext="\|f^{*}\|_{q}=1" display="inline"><mrow><msub><mrow><mo>∥</mo><msup><mi>f</mi><mo>*</mo></msup><mo>∥</mo></mrow><mi>q</mi></msub><mo>=</mo><mn>1</mn></mrow></math>, completing the proof.
+∎</p>
+</div>
+</div>
+<div id="S3.p6" class="ltx_para">
+<p class="ltx_p">We shall refer to the function <math id="S3.p6.m1" class="ltx_Math" alttext="f^{*}" display="inline"><msup><mi>f</mi><mo>*</mo></msup></math> corresponding <math id="S3.p6.m2" class="ltx_Math" alttext="f\neq 0" display="inline"><mrow><mi>f</mi><mo>≠</mo><mn>0</mn></mrow></math> defined above as the <span class="ltx_text ltx_font_italic">conjugate function</span> of <math id="S3.p6.m3" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math>.</p>
+</div>
+<div id="Thmtheorem2" class="ltx_theorem ltx_theorem_corollary">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Corollary 2</span></span></h6>
+<div id="Thmtheorem2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If <math id="Thmtheorem2.p1.m1" class="ltx_Math" alttext="f,g\in L^{2}" display="inline"><mrow><mrow><mi>f</mi><mo mathvariant="normal">,</mo><mi>g</mi></mrow><mo mathvariant="normal">∈</mo><msup><mi>L</mi><mn mathvariant="normal">2</mn></msup></mrow></math> then</span></p>
+<table id="S3.Ex27" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex27.m1" class="ltx_Math" alttext="\int_{S}|fg|\,d\mu\leq\sqrt{\int_{S}|f|^{2}\,d\mu}\,\sqrt{\int_{S}|g|^{2}\,d\mu}" display="block"><mrow><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>S</mi></msub><mrow><mrow><mo stretchy="false">|</mo><mrow><mi>f</mi><mo>⁢</mo><mi>g</mi></mrow><mo rspace="4.2pt" stretchy="false">|</mo></mrow><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>μ</mi></mrow></mrow></mrow><mo>≤</mo><mrow><mpadded width="+1.7pt"><msqrt><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>S</mi></msub><mrow><mpadded width="+1.7pt"><msup><mrow><mo stretchy="false">|</mo><mi>f</mi><mo stretchy="false">|</mo></mrow><mn>2</mn></msup></mpadded><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>μ</mi></mrow></mrow></mrow></msqrt></mpadded><mo>⁢</mo><msqrt><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>S</mi></msub><mrow><mpadded width="+1.7pt"><msup><mrow><mo stretchy="false">|</mo><mi>g</mi><mo stretchy="false">|</mo></mrow><mn>2</mn></msup></mpadded><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>μ</mi></mrow></mrow></mrow></msqrt></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</div>
+<div id="Thmtheorem3" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Theorem 3</span></span><span class="ltx_text ltx_font_bold"> </span>(Minkowski inequality)</h6>
+<div id="Thmtheorem3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <math id="Thmtheorem3.p1.m1" class="ltx_Math" alttext="f,g\in L^{p}" display="inline"><mrow><mrow><mi>f</mi><mo mathvariant="normal">,</mo><mi>g</mi></mrow><mo mathvariant="normal">∈</mo><msup><mi>L</mi><mi>p</mi></msup></mrow></math> where <math id="Thmtheorem3.p1.m2" class="ltx_Math" alttext="1\leq p\leq\infty" display="inline"><mrow><mn mathvariant="normal">1</mn><mo mathvariant="normal">≤</mo><mi>p</mi><mo mathvariant="normal">≤</mo><mi mathvariant="normal">∞</mi></mrow></math>. Then</span></p>
+<table id="S3.Ex28" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex28.m1" class="ltx_Math" alttext="\|f+g\|_{p}\leq\|f\|_{p}+\|g\|_{p}." display="block"><mrow><mrow><msub><mrow><mo>∥</mo><mrow><mi>f</mi><mo>+</mo><mi>g</mi></mrow><mo>∥</mo></mrow><mi>p</mi></msub><mo>≤</mo><mrow><msub><mrow><mo>∥</mo><mi>f</mi><mo>∥</mo></mrow><mi>p</mi></msub><mo>+</mo><msub><mrow><mo>∥</mo><mi>g</mi><mo>∥</mo></mrow><mi>p</mi></msub></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="S3.p7" class="ltx_para">
+<p class="ltx_p">The case of <math id="S3.p7.m1" class="ltx_Math" alttext="p=1" display="inline"><mrow><mi>p</mi><mo>=</mo><mn>1</mn></mrow></math> and <math id="S3.p7.m2" class="ltx_Math" alttext="p=\infty" display="inline"><mrow><mi>p</mi><mo>=</mo><mi mathvariant="normal">∞</mi></mrow></math> are straightforward as mentioned earlier. This we consider <math id="S3.p7.m3" class="ltx_Math" alttext="1&lt;p&lt;\infty" display="inline"><mrow><mn>1</mn><mo>&lt;</mo><mi>p</mi><mo>&lt;</mo><mi mathvariant="normal">∞</mi></mrow></math>.
+If <math id="S3.p7.m4" class="ltx_Math" alttext="f+g=0" display="inline"><mrow><mrow><mi>f</mi><mo>+</mo><mi>g</mi></mrow><mo>=</mo><mn>0</mn></mrow></math> the result is trivial. So we consider the case
+of <math id="S3.p7.m5" class="ltx_Math" alttext="f+g\neq 0" display="inline"><mrow><mrow><mi>f</mi><mo>+</mo><mi>g</mi></mrow><mo>≠</mo><mn>0</mn></mrow></math>. Then by the second part of the theorem on Holder’s inequality,</p>
+<table id="S3.Ex29" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex29.m1" class="ltx_Math" alttext="\|f+g\|_{p}=\int_{S}(f+g)\,(f+g)^{*}\,d\mu=\int_{S}f(f+g)^{*}\,d\mu+\int_{S}g(%
+f+g)^{*}\,d\mu," display="block"><mrow><mrow><msub><mrow><mo>∥</mo><mrow><mi>f</mi><mo>+</mo><mi>g</mi></mrow><mo>∥</mo></mrow><mi>p</mi></msub><mo>=</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>S</mi></msub><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>f</mi><mo>+</mo><mi>g</mi></mrow><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mo>⁢</mo><mpadded width="+1.7pt"><msup><mrow><mo stretchy="false">(</mo><mrow><mi>f</mi><mo>+</mo><mi>g</mi></mrow><mo stretchy="false">)</mo></mrow><mo>*</mo></msup></mpadded><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>μ</mi></mrow></mrow></mrow><mo>=</mo><mrow><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>S</mi></msub><mrow><mi>f</mi><mo>⁢</mo><mpadded width="+1.7pt"><msup><mrow><mo stretchy="false">(</mo><mrow><mi>f</mi><mo>+</mo><mi>g</mi></mrow><mo stretchy="false">)</mo></mrow><mo>*</mo></msup></mpadded><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>μ</mi></mrow></mrow></mrow><mo>+</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>S</mi></msub><mrow><mi>g</mi><mo>⁢</mo><mpadded width="+1.7pt"><msup><mrow><mo stretchy="false">(</mo><mrow><mi>f</mi><mo>+</mo><mi>g</mi></mrow><mo stretchy="false">)</mo></mrow><mo>*</mo></msup></mpadded><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>μ</mi></mrow></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="S3.p7.m6" class="ltx_Math" alttext="(f+g)^{*}" display="inline"><msup><mrow><mo stretchy="false">(</mo><mrow><mi>f</mi><mo>+</mo><mi>g</mi></mrow><mo stretchy="false">)</mo></mrow><mo>*</mo></msup></math> is the conjugate function of <math id="S3.p7.m7" class="ltx_Math" alttext="f+g" display="inline"><mrow><mi>f</mi><mo>+</mo><mi>g</mi></mrow></math>.
+Applying (the first and then the second parts of) the Holder’s inequality,
+we obtain</p>
+<table id="S3.Ex30" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex30.m1" class="ltx_Math" alttext="\|f+g\|_{p}\leq\|f\|_{p}\|(f+g)^{*}\|_{q}+\|g\|_{p}\|(f+g)^{*}\|_{q}=\|f\|_{p}%
++\|g\|_{q}." display="block"><mrow><mrow><msub><mrow><mo>∥</mo><mrow><mi>f</mi><mo>+</mo><mi>g</mi></mrow><mo>∥</mo></mrow><mi>p</mi></msub><mo>≤</mo><mrow><mrow><msub><mrow><mo>∥</mo><mi>f</mi><mo>∥</mo></mrow><mi>p</mi></msub><mo>⁢</mo><msub><mrow><mo>∥</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>f</mi><mo>+</mo><mi>g</mi></mrow><mo stretchy="false">)</mo></mrow><mo>*</mo></msup><mo>∥</mo></mrow><mi>q</mi></msub></mrow><mo>+</mo><mrow><msub><mrow><mo>∥</mo><mi>g</mi><mo>∥</mo></mrow><mi>p</mi></msub><mo>⁢</mo><msub><mrow><mo>∥</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>f</mi><mo>+</mo><mi>g</mi></mrow><mo stretchy="false">)</mo></mrow><mo>*</mo></msup><mo>∥</mo></mrow><mi>q</mi></msub></mrow></mrow><mo>=</mo><mrow><msub><mrow><mo>∥</mo><mi>f</mi><mo>∥</mo></mrow><mi>p</mi></msub><mo>+</mo><msub><mrow><mo>∥</mo><mi>g</mi><mo>∥</mo></mrow><mi>q</mi></msub></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">∎</p>
+</div>
+</div>
+<div id="S3.p8" class="ltx_para">
+<p class="ltx_p">With the Minkowski inequality, it is clear that <math id="S3.p8.m1" class="ltx_Math" alttext="L^{p}" display="inline"><msup><mi>L</mi><mi>p</mi></msup></math> is
+a normed vector space for <math id="S3.p8.m2" class="ltx_Math" alttext="1\leq p\leq\infty" display="inline"><mrow><mn>1</mn><mo>≤</mo><mi>p</mi><mo>≤</mo><mi mathvariant="normal">∞</mi></mrow></math>. Finally, we note that <math id="S3.p8.m3" class="ltx_Math" alttext="L^{p}" display="inline"><msup><mi>L</mi><mi>p</mi></msup></math> is indeed a Banach space. In other words it is a complete normed vector space. The theorem that asserts this is referred to as the <span class="ltx_text ltx_font_italic">Riesz-Fischer Theorem</span> by some authors including Royden.
+</p>
+</div>
+</section>
+<section id="S4" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">4 </span><math id="S4.m1" class="ltx_Math" alttext="L^{p}" display="inline"><msup><mi>L</mi><mi>p</mi></msup></math> spaces are complete</h2>
+
+<div id="Thmtheorem4" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Theorem 4</span></span></h6>
+<div id="Thmtheorem4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">The normed vector space <math id="Thmtheorem4.p1.m1" class="ltx_Math" alttext="L^{p}(S,\Sigma,\mu)" display="inline"><mrow><msup><mi>L</mi><mi>p</mi></msup><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>S</mi><mo mathvariant="normal">,</mo><mi mathvariant="normal">Σ</mi><mo mathvariant="normal">,</mo><mi>μ</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></math> is complete and hence a Banach space.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="S4.p1" class="ltx_para">
+<p class="ltx_p">We show the proof for <math id="S4.p1.m1" class="ltx_Math" alttext="1\leq p&lt;\infty" display="inline"><mrow><mn>1</mn><mo>≤</mo><mi>p</mi><mo>&lt;</mo><mi mathvariant="normal">∞</mi></mrow></math>. Let <math id="S4.p1.m2" class="ltx_Math" alttext="f_{n}\in L^{p}" display="inline"><mrow><msub><mi>f</mi><mi>n</mi></msub><mo>∈</mo><msup><mi>L</mi><mi>p</mi></msup></mrow></math> for <math id="S4.p1.m3" class="ltx_Math" alttext="n\in\mathbb{N}" display="inline"><mrow><mi>n</mi><mo>∈</mo><mi>ℕ</mi></mrow></math> and suppose that</p>
+<table id="S4.Ex31" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex31.m1" class="ltx_Math" alttext="\sum_{n\in\mathbb{N}}\|f_{n}\|_{p}&lt;\infty." display="block"><mrow><mrow><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>n</mi><mo>∈</mo><mi>ℕ</mi></mrow></munder><msub><mrow><mo>∥</mo><msub><mi>f</mi><mi>n</mi></msub><mo>∥</mo></mrow><mi>p</mi></msub></mrow><mo>&lt;</mo><mi mathvariant="normal">∞</mi></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Let <math id="S4.p1.m4" class="ltx_Math" alttext="g_{n}=\sum_{j=1}^{n}f_{j}" display="inline"><mrow><msub><mi>g</mi><mi>n</mi></msub><mo>=</mo><mrow><msubsup><mo largeop="true" symmetric="true">∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><msub><mi>f</mi><mi>j</mi></msub></mrow></mrow></math> be the sequence of partial sums. If we show that there exists <math id="S4.p1.m5" class="ltx_Math" alttext="g\in L^{p}" display="inline"><mrow><mi>g</mi><mo>∈</mo><msup><mi>L</mi><mi>p</mi></msup></mrow></math> such that
+<math id="S4.p1.m6" class="ltx_Math" alttext="g_{n}\to g" display="inline"><mrow><msub><mi>g</mi><mi>n</mi></msub><mo>→</mo><mi>g</mi></mrow></math> in <math id="S4.p1.m7" class="ltx_Math" alttext="L^{p}" display="inline"><msup><mi>L</mi><mi>p</mi></msup></math> we are done.</p>
+</div>
+<div id="S4.p2" class="ltx_para">
+<p class="ltx_p">Let <math id="S4.p2.m1" class="ltx_Math" alttext="M&gt;0" display="inline"><mrow><mi>M</mi><mo>&gt;</mo><mn>0</mn></mrow></math> satisfy <math id="S4.p2.m2" class="ltx_Math" alttext="\sum_{n\in\mathbb{N}}\|f_{n}\|_{p}\leq M" display="inline"><mrow><mrow><msub><mo largeop="true" symmetric="true">∑</mo><mrow><mi>n</mi><mo>∈</mo><mi>ℕ</mi></mrow></msub><msub><mrow><mo>∥</mo><msub><mi>f</mi><mi>n</mi></msub><mo>∥</mo></mrow><mi>p</mi></msub></mrow><mo>≤</mo><mi>M</mi></mrow></math>.
+Define the sequence <math id="S4.p2.m3" class="ltx_Math" alttext="h_{n}:S\to\mathbb{R}" display="inline"><mrow><msub><mi>h</mi><mi>n</mi></msub><mo>:</mo><mrow><mi>S</mi><mo>→</mo><mi>ℝ</mi></mrow></mrow></math> by
+<math id="S4.p2.m4" class="ltx_Math" alttext="h_{n}=\sum_{j=1}^{n}|f_{j}|" display="inline"><mrow><msub><mi>h</mi><mi>n</mi></msub><mo>=</mo><mrow><msubsup><mo largeop="true" symmetric="true">∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><mrow><mo stretchy="false">|</mo><msub><mi>f</mi><mi>j</mi></msub><mo stretchy="false">|</mo></mrow></mrow></mrow></math>. Since <math id="S4.p2.m5" class="ltx_Math" alttext="(h_{n})" display="inline"><mrow><mo stretchy="false">(</mo><msub><mi>h</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></math> is an increasing sequence it has a limit (in the almost everywhere sense) which may be infinity.
+Let <math id="S4.p2.m6" class="ltx_Math" alttext="h=\lim_{n\to\infty}h_{n}\leq\infty" display="inline"><mrow><mi>h</mi><mo>=</mo><mrow><msub><mo>lim</mo><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></msub><mo>⁡</mo><msub><mi>h</mi><mi>n</mi></msub></mrow><mo>≤</mo><mi mathvariant="normal">∞</mi></mrow></math> a.e.
+Thus <math id="S4.p2.m7" class="ltx_Math" alttext="h_{n}^{p}\uparrow h^{p}" display="inline"><mrow><msubsup><mi>h</mi><mi>n</mi><mi>p</mi></msubsup><mo>↑</mo><msup><mi>h</mi><mi>p</mi></msup></mrow></math> a.e. as <math id="S4.p2.m8" class="ltx_Math" alttext="n\to\infty" display="inline"><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></math>.
+By monotone convergence theorem</p>
+<table id="S4.Ex32" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex32.m1" class="ltx_Math" alttext="\int_{S}h_{n}^{p}\,d\mu\to\int_{S}h^{p}\,d\mu." display="block"><mrow><mrow><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>S</mi></msub><mrow><mpadded width="+1.7pt"><msubsup><mi>h</mi><mi>n</mi><mi>p</mi></msubsup></mpadded><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>μ</mi></mrow></mrow></mrow><mo>→</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>S</mi></msub><mrow><mpadded width="+1.7pt"><msup><mi>h</mi><mi>p</mi></msup></mpadded><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>μ</mi></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">By Minkowski inequality, for each <math id="S4.p2.m9" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math></p>
+<table id="S4.Ex33" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex33.m1" class="ltx_Math" alttext="\|h_{n}\|_{p}\leq\sum_{j=1}^{n}\|f_{j}\|_{p}." display="block"><mrow><mrow><msub><mrow><mo>∥</mo><msub><mi>h</mi><mi>n</mi></msub><mo>∥</mo></mrow><mi>p</mi></msub><mo>≤</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msub><mrow><mo>∥</mo><msub><mi>f</mi><mi>j</mi></msub><mo>∥</mo></mrow><mi>p</mi></msub></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Note that <math id="S4.p2.m10" class="ltx_Math" alttext="\||f_{j}|\|_{p}=\|f_{j}\|_{p}" display="inline"><mrow><msub><mrow><mo>∥</mo><mrow><mo stretchy="false">|</mo><msub><mi>f</mi><mi>j</mi></msub><mo stretchy="false">|</mo></mrow><mo>∥</mo></mrow><mi>p</mi></msub><mo>=</mo><msub><mrow><mo>∥</mo><msub><mi>f</mi><mi>j</mi></msub><mo>∥</mo></mrow><mi>p</mi></msub></mrow></math>. Hence <math id="S4.p2.m11" class="ltx_Math" alttext="\|h_{n}\|_{p}\leq M" display="inline"><mrow><msub><mrow><mo>∥</mo><msub><mi>h</mi><mi>n</mi></msub><mo>∥</mo></mrow><mi>p</mi></msub><mo>≤</mo><mi>M</mi></mrow></math> for all <math id="S4.p2.m12" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>. Thus for all <math id="S4.p2.m13" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math></p>
+<table id="S4.Ex34" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex34.m1" class="ltx_Math" alttext="\int_{S}h_{n}^{p}\,d\mu\leq M^{p}" display="block"><mrow><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>S</mi></msub><mrow><mpadded width="+1.7pt"><msubsup><mi>h</mi><mi>n</mi><mi>p</mi></msubsup></mpadded><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>μ</mi></mrow></mrow></mrow><mo>≤</mo><msup><mi>M</mi><mi>p</mi></msup></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and hence <math id="S4.p2.m14" class="ltx_Math" alttext="\int_{S}h^{p}d\mu\leq M^{p}" display="inline"><mrow><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>S</mi></msub><mrow><msup><mi>h</mi><mi>p</mi></msup><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>μ</mi></mrow></mrow></mrow><mo>≤</mo><msup><mi>M</mi><mi>p</mi></msup></mrow></math>. Therefore
+<math id="S4.p2.m15" class="ltx_Math" alttext="h&lt;\infty" display="inline"><mrow><mi>h</mi><mo>&lt;</mo><mi mathvariant="normal">∞</mi></mrow></math> a.e.
+Thus for almost all <math id="S4.p2.m16" class="ltx_Math" alttext="x\in S" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>S</mi></mrow></math>, the series</p>
+<table id="S4.Ex35" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex35.m1" class="ltx_Math" alttext="\sum_{n\in\mathbb{N}}f_{n}(x)" display="block"><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>n</mi><mo>∈</mo><mi>ℕ</mi></mrow></munder><mrow><msub><mi>f</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">converges absolutely and hence converges.
+Let <math id="S4.p2.m17" class="ltx_Math" alttext="g=\lim_{n\to\infty}g_{n}" display="inline"><mrow><mi>g</mi><mo>=</mo><mrow><msub><mo>lim</mo><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></msub><mo>⁡</mo><msub><mi>g</mi><mi>n</mi></msub></mrow></mrow></math> a.e. It follows that
+<math id="S4.p2.m18" class="ltx_Math" alttext="|g_{n}-g|^{p}\to 0" display="inline"><mrow><msup><mrow><mo stretchy="false">|</mo><mrow><msub><mi>g</mi><mi>n</mi></msub><mo>-</mo><mi>g</mi></mrow><mo stretchy="false">|</mo></mrow><mi>p</mi></msup><mo>→</mo><mn>0</mn></mrow></math> a.e. as <math id="S4.p2.m19" class="ltx_Math" alttext="n\to\infty" display="inline"><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></math>. Since</p>
+<table id="S4.Ex36" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex36.m1" class="ltx_Math" alttext="|g_{n}-g|^{p}\leq 2^{p}\left(|g_{n}|^{p}+|g|^{p}\right)\leq 2^{p}\left(h_{n}^{%
+p}+h^{p}\right)\leq 2^{p+1}h^{p}" display="block"><mrow><msup><mrow><mo stretchy="false">|</mo><mrow><msub><mi>g</mi><mi>n</mi></msub><mo>-</mo><mi>g</mi></mrow><mo stretchy="false">|</mo></mrow><mi>p</mi></msup><mo>≤</mo><mrow><msup><mn>2</mn><mi>p</mi></msup><mo>⁢</mo><mrow><mo>(</mo><mrow><msup><mrow><mo stretchy="false">|</mo><msub><mi>g</mi><mi>n</mi></msub><mo stretchy="false">|</mo></mrow><mi>p</mi></msup><mo>+</mo><msup><mrow><mo stretchy="false">|</mo><mi>g</mi><mo stretchy="false">|</mo></mrow><mi>p</mi></msup></mrow><mo>)</mo></mrow></mrow><mo>≤</mo><mrow><msup><mn>2</mn><mi>p</mi></msup><mo>⁢</mo><mrow><mo>(</mo><mrow><msubsup><mi>h</mi><mi>n</mi><mi>p</mi></msubsup><mo>+</mo><msup><mi>h</mi><mi>p</mi></msup></mrow><mo>)</mo></mrow></mrow><mo>≤</mo><mrow><msup><mn>2</mn><mrow><mi>p</mi><mo>+</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msup><mi>h</mi><mi>p</mi></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and <math id="S4.p2.m20" class="ltx_Math" alttext="h^{p}" display="inline"><msup><mi>h</mi><mi>p</mi></msup></math> is integrable, by the dominated convergence theorem <math id="S4.p2.m21" class="ltx_Math" alttext="\int_{S}|g_{n}-g|^{p}d\mu" display="inline"><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>S</mi></msub><mrow><msup><mrow><mo stretchy="false">|</mo><mrow><msub><mi>g</mi><mi>n</mi></msub><mo>-</mo><mi>g</mi></mrow><mo stretchy="false">|</mo></mrow><mi>p</mi></msup><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>μ</mi></mrow></mrow></mrow></math> converges to <math id="S4.p2.m22" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math>. That is <math id="S4.p2.m23" class="ltx_Math" alttext="g_{n}\to g" display="inline"><mrow><msub><mi>g</mi><mi>n</mi></msub><mo>→</mo><mi>g</mi></mrow></math> in <math id="S4.p2.m24" class="ltx_Math" alttext="L^{p}" display="inline"><msup><mi>L</mi><mi>p</mi></msup></math>.
+∎</p>
+</div>
+</div>
+</section>
+<section id="S5" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">5 </span>Some examples of <math id="S5.m1" class="ltx_Math" alttext="L^{p}" display="inline"><msup><mi>L</mi><mi>p</mi></msup></math> spaces</h2>
+
+<div id="S5.p1" class="ltx_para">
+<p class="ltx_p">We consider special examples of <math id="S5.p1.m1" class="ltx_Math" alttext="L^{p}(S,\Sigma,\mu)" display="inline"><mrow><msup><mi>L</mi><mi>p</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>S</mi><mo>,</mo><mi mathvariant="normal">Σ</mi><mo>,</mo><mi>μ</mi><mo stretchy="false">)</mo></mrow></mrow></math>.
+First consider the case of a finite set <math id="S5.p1.m2" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> which we may
+without loss of generality take to be <math id="S5.p1.m3" class="ltx_Math" alttext="S=\{1,2,\dots,n\}" display="inline"><mrow><mi>S</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>n</mi><mo stretchy="false">}</mo></mrow></mrow></math>. Take <math id="S5.p1.m4" class="ltx_Math" alttext="\Sigma=2^{S}" display="inline"><mrow><mi mathvariant="normal">Σ</mi><mo>=</mo><msup><mn>2</mn><mi>S</mi></msup></mrow></math> (the power set) and the measure <math id="S5.p1.m5" class="ltx_Math" alttext="\mu" display="inline"><mi>μ</mi></math>
+to be the <span class="ltx_text ltx_font_italic">counting measure</span>. This means <math id="S5.p1.m6" class="ltx_Math" alttext="\mu(A)" display="inline"><mrow><mi>μ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow></math> equals the number of elements in <math id="S5.p1.m7" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>. Then a function <math id="S5.p1.m8" class="ltx_Math" alttext="f\in L^{p}(S,\Sigma,\mu)" display="inline"><mrow><mi>f</mi><mo>∈</mo><mrow><msup><mi>L</mi><mi>p</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>S</mi><mo>,</mo><mi mathvariant="normal">Σ</mi><mo>,</mo><mi>μ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> is simply any function from <math id="S5.p1.m9" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> into <math id="S5.p1.m10" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math> and hence can be identified with <math id="S5.p1.m11" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>-tuples of real numbers. Thus <math id="S5.p1.m12" class="ltx_Math" alttext="L^{p}(S,\Sigma,\mu)" display="inline"><mrow><msup><mi>L</mi><mi>p</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>S</mi><mo>,</mo><mi mathvariant="normal">Σ</mi><mo>,</mo><mi>μ</mi><mo stretchy="false">)</mo></mrow></mrow></math> is the same as <math id="S5.p1.m13" class="ltx_Math" alttext="\mathbb{R}^{n}" display="inline"><msup><mi>ℝ</mi><mi>n</mi></msup></math> and</p>
+<table id="S5.Ex37" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex37.m1" class="ltx_Math" alttext="\|f\|_{p}=\left(\sum_{i=1}^{n}|f(i)|^{p}\right)^{\frac{1}{p}}" display="block"><mrow><msub><mrow><mo>∥</mo><mi>f</mi><mo>∥</mo></mrow><mi>p</mi></msub><mo>=</mo><msup><mrow><mo>(</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msup><mrow><mo stretchy="false">|</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mi>p</mi></msup></mrow><mo>)</mo></mrow><mfrac><mn>1</mn><mi>p</mi></mfrac></msup></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">the <math id="S5.p1.m14" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math>-norm of a vector in <math id="S5.p1.m15" class="ltx_Math" alttext="\mathbb{R}^{n}" display="inline"><msup><mi>ℝ</mi><mi>n</mi></msup></math> (for <math id="S5.p1.m16" class="ltx_Math" alttext="p&lt;\infty" display="inline"><mrow><mi>p</mi><mo>&lt;</mo><mi mathvariant="normal">∞</mi></mrow></math>)
+and for <math id="S5.p1.m17" class="ltx_Math" alttext="p=\infty" display="inline"><mrow><mi>p</mi><mo>=</mo><mi mathvariant="normal">∞</mi></mrow></math> it is simply the sup-norm.
+We note that the integral with respect to the counting measure becomes a sum over the finite number (<math id="S5.p1.m18" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>) of elements.</p>
+</div>
+<div id="S5.p2" class="ltx_para">
+<p class="ltx_p">Another example is where <math id="S5.p2.m1" class="ltx_Math" alttext="S=\mathbb{N}" display="inline"><mrow><mi>S</mi><mo>=</mo><mi>ℕ</mi></mrow></math>, <math id="S5.p2.m2" class="ltx_Math" alttext="\Sigma=2^{\mathbb{N}}" display="inline"><mrow><mi mathvariant="normal">Σ</mi><mo>=</mo><msup><mn>2</mn><mi>ℕ</mi></msup></mrow></math> (the power set) and <math id="S5.p2.m3" class="ltx_Math" alttext="\mu" display="inline"><mi>μ</mi></math> the counting measure. In this case
+<math id="S5.p2.m4" class="ltx_Math" alttext="L^{p}(S,\Sigma,\mu)" display="inline"><mrow><msup><mi>L</mi><mi>p</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>S</mi><mo>,</mo><mi mathvariant="normal">Σ</mi><mo>,</mo><mi>μ</mi><mo stretchy="false">)</mo></mrow></mrow></math> becomes <math id="S5.p2.m5" class="ltx_Math" alttext="\ell^{p}" display="inline"><msup><mi mathvariant="normal">ℓ</mi><mi>p</mi></msup></math> discussed earlier.
+The integral becomes an infinite sum.</p>
+</div>
+<div id="S5.p3" class="ltx_para">
+<p class="ltx_p">In the study of PDEs, it is common to consider <math id="S5.p3.m1" class="ltx_Math" alttext="S\subset\mathbb{R}^{n}" display="inline"><mrow><mi>S</mi><mo>⊂</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow></math> to be a subset with nonempty interior, <math id="S5.p3.m2" class="ltx_Math" alttext="\Sigma=\mathbb{B}(S)" display="inline"><mrow><mi mathvariant="normal">Σ</mi><mo>=</mo><mrow><mi>𝔹</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>S</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, that is the <math id="S5.p3.m3" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math>-algebra generated by open subsets of <math id="S5.p3.m4" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> and <math id="S5.p3.m5" class="ltx_Math" alttext="\mu" display="inline"><mi>μ</mi></math> to be the <math id="S5.p3.m6" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>-dimensional Lebesgue measure.</p>
+</div>
+</section>
+<section id="S6" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">6 </span>Simple functions</h2>
+
+<div id="S6.p1" class="ltx_para">
+<p class="ltx_p">Given a measure space <math id="S6.p1.m1" class="ltx_Math" alttext="(S,\Sigma,\mu)" display="inline"><mrow><mo stretchy="false">(</mo><mi>S</mi><mo>,</mo><mi mathvariant="normal">Σ</mi><mo>,</mo><mi>μ</mi><mo stretchy="false">)</mo></mrow></math> we recall the concept of a <span class="ltx_text ltx_font_italic">simple measurable function</span> or just a <span class="ltx_text ltx_font_italic">simple function</span>. A measurable function <math id="S6.p1.m2" class="ltx_Math" alttext="f:S\to\mathbb{R}" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>S</mi><mo>→</mo><mi>ℝ</mi></mrow></mrow></math> is said to be simple provided <math id="S6.p1.m3" class="ltx_Math" alttext="f(S)" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>S</mi><mo stretchy="false">)</mo></mrow></mrow></math> is a finite set. Given a simple function <math id="S6.p1.m4" class="ltx_Math" alttext="f:S\to\mathbb{R}" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>S</mi><mo>→</mo><mi>ℝ</mi></mrow></mrow></math> it follows that if we denote <math id="S6.p1.m5" class="ltx_Math" alttext="f(S)=\{a_{1},\dots,a_{n}\}" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>S</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false">}</mo></mrow></mrow></math> and
+let <math id="S6.p1.m6" class="ltx_Math" alttext="A_{i}=f^{-1}(\{a_{i}\})\in\Sigma" display="inline"><mrow><msub><mi>A</mi><mi>i</mi></msub><mo>=</mo><mrow><msup><mi>f</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo stretchy="false">{</mo><msub><mi>a</mi><mi>i</mi></msub><mo stretchy="false">}</mo></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>∈</mo><mi mathvariant="normal">Σ</mi></mrow></math> then</p>
+<table id="S6.Ex38" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S6.Ex38.m1" class="ltx_Math" alttext="f=\sum_{i=1}^{n}a_{i}1_{A_{i}}" display="block"><mrow><mi>f</mi><mo>=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mrow><msub><mi>a</mi><mi>i</mi></msub><mo>⁢</mo><msub><mn>1</mn><msub><mi>A</mi><mi>i</mi></msub></msub></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="S6.p1.m7" class="ltx_Math" alttext="1_{A_{i}}" display="inline"><msub><mn>1</mn><msub><mi>A</mi><mi>i</mi></msub></msub></math> is the <span class="ltx_text ltx_font_italic">indicator function</span> of the set <math id="S6.p1.m8" class="ltx_Math" alttext="A_{i}" display="inline"><msub><mi>A</mi><mi>i</mi></msub></math>. This means <math id="S6.p1.m9" class="ltx_Math" alttext="1_{A_{i}}(x)=1" display="inline"><mrow><mrow><msub><mn>1</mn><msub><mi>A</mi><mi>i</mi></msub></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>1</mn></mrow></math> for <math id="S6.p1.m10" class="ltx_Math" alttext="x\in A_{i}" display="inline"><mrow><mi>x</mi><mo>∈</mo><msub><mi>A</mi><mi>i</mi></msub></mrow></math> and <math id="S6.p1.m11" class="ltx_Math" alttext="1_{A_{i}}(x)=0" display="inline"><mrow><mrow><msub><mn>1</mn><msub><mi>A</mi><mi>i</mi></msub></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math> for <math id="S6.p1.m12" class="ltx_Math" alttext="x\notin A_{i}" display="inline"><mrow><mi>x</mi><mo>∉</mo><msub><mi>A</mi><mi>i</mi></msub></mrow></math>. It is easy to see that the set of all simple functions is a vector space over <math id="S6.p1.m13" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>. We also note that all simple functions belong to <math id="S6.p1.m14" class="ltx_Math" alttext="L^{p}" display="inline"><msup><mi>L</mi><mi>p</mi></msup></math> for <math id="S6.p1.m15" class="ltx_Math" alttext="1\leq p\leq\infty" display="inline"><mrow><mn>1</mn><mo>≤</mo><mi>p</mi><mo>≤</mo><mi mathvariant="normal">∞</mi></mrow></math>. We shall show that
+the simple functions are dense in <math id="S6.p1.m16" class="ltx_Math" alttext="L^{p}" display="inline"><msup><mi>L</mi><mi>p</mi></msup></math> for <math id="S6.p1.m17" class="ltx_Math" alttext="1\leq p\leq\infty" display="inline"><mrow><mn>1</mn><mo>≤</mo><mi>p</mi><mo>≤</mo><mi mathvariant="normal">∞</mi></mrow></math>.</p>
+</div>
+<div id="Thmtheorem5" class="ltx_theorem ltx_theorem_lemma">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Lemma 5</span></span></h6>
+<div id="Thmtheorem5.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <math id="Thmtheorem5.p1.m1" class="ltx_Math" alttext="f\in L^{p}(S,\Sigma,\mu)" display="inline"><mrow><mi>f</mi><mo mathvariant="normal">∈</mo><mrow><msup><mi>L</mi><mi>p</mi></msup><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>S</mi><mo mathvariant="normal">,</mo><mi mathvariant="normal">Σ</mi><mo mathvariant="normal">,</mo><mi>μ</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></mrow></math> where <math id="Thmtheorem5.p1.m2" class="ltx_Math" alttext="1\leq p&lt;\infty" display="inline"><mrow><mn mathvariant="normal">1</mn><mo mathvariant="normal">≤</mo><mi>p</mi><mo mathvariant="normal">&lt;</mo><mi mathvariant="normal">∞</mi></mrow></math>. Then for every <math id="Thmtheorem5.p1.m3" class="ltx_Math" alttext="\epsilon&gt;0" display="inline"><mrow><mi>ϵ</mi><mo mathvariant="normal">&gt;</mo><mn mathvariant="normal">0</mn></mrow></math> there exists <math id="Thmtheorem5.p1.m4" class="ltx_Math" alttext="A\in\Sigma" display="inline"><mrow><mi>A</mi><mo mathvariant="normal">∈</mo><mi mathvariant="normal">Σ</mi></mrow></math> such that <math id="Thmtheorem5.p1.m5" class="ltx_Math" alttext="\mu(A)&lt;\infty" display="inline"><mrow><mrow><mi>μ</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>A</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow><mo mathvariant="normal">&lt;</mo><mi mathvariant="normal">∞</mi></mrow></math> and <math id="Thmtheorem5.p1.m6" class="ltx_Math" alttext="\int_{S\setminus A}|f|^{p}d\mu&lt;\epsilon" display="inline"><mrow><mrow><msub><mo largeop="true" mathvariant="normal" symmetric="true">∫</mo><mrow><mi>S</mi><mo mathvariant="normal">∖</mo><mi>A</mi></mrow></msub><mrow><msup><mrow><mo mathvariant="normal" stretchy="false">|</mo><mi>f</mi><mo mathvariant="normal" stretchy="false">|</mo></mrow><mi>p</mi></msup><mo mathvariant="italic">⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>μ</mi></mrow></mrow></mrow><mo mathvariant="normal">&lt;</mo><mi>ϵ</mi></mrow></math>.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="S6.p2" class="ltx_para">
+<p class="ltx_p">Let <math id="S6.p2.m1" class="ltx_Math" alttext="g=|f|" display="inline"><mrow><mi>g</mi><mo>=</mo><mrow><mo stretchy="false">|</mo><mi>f</mi><mo stretchy="false">|</mo></mrow></mrow></math>. For each <math id="S6.p2.m2" class="ltx_Math" alttext="n\in\mathbb{N}" display="inline"><mrow><mi>n</mi><mo>∈</mo><mi>ℕ</mi></mrow></math> define <math id="S6.p2.m3" class="ltx_Math" alttext="E_{n}=g^{-1}([1/n,\infty))" display="inline"><mrow><msub><mi>E</mi><mi>n</mi></msub><mo>=</mo><mrow><msup><mi>g</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo stretchy="false">[</mo><mrow><mn>1</mn><mo>/</mo><mi>n</mi></mrow><mo>,</mo><mi mathvariant="normal">∞</mi><mo stretchy="false">)</mo></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. Then <math id="S6.p2.m4" class="ltx_Math" alttext="E_{n}\in\Sigma" display="inline"><mrow><msub><mi>E</mi><mi>n</mi></msub><mo>∈</mo><mi mathvariant="normal">Σ</mi></mrow></math> and
+<math id="S6.p2.m5" class="ltx_Math" alttext="E_{n}\uparrow E" display="inline"><mrow><msub><mi>E</mi><mi>n</mi></msub><mo>↑</mo><mi>E</mi></mrow></math> where <math id="S6.p2.m6" class="ltx_Math" alttext="E=\cup_{n}E_{n}" display="inline"><mrow><mi>E</mi><mo>=</mo><mrow><msub><mo>∪</mo><mi>n</mi></msub><msub><mi>E</mi><mi>n</mi></msub></mrow></mrow></math>. It follows that <math id="S6.p2.m7" class="ltx_Math" alttext="g=0" display="inline"><mrow><mi>g</mi><mo>=</mo><mn>0</mn></mrow></math> on <math id="S6.p2.m8" class="ltx_Math" alttext="S\setminus E" display="inline"><mrow><mi>S</mi><mo>∖</mo><mi>E</mi></mrow></math>. We also have that <math id="S6.p2.m9" class="ltx_Math" alttext="1_{E_{n}}g\uparrow 1_{E}g" display="inline"><mrow><mrow><msub><mn>1</mn><msub><mi>E</mi><mi>n</mi></msub></msub><mo>⁢</mo><mi>g</mi></mrow><mo>↑</mo><mrow><msub><mn>1</mn><mi>E</mi></msub><mo>⁢</mo><mi>g</mi></mrow></mrow></math> and by monotone convergence theorem</p>
+<table id="S6.Ex39" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S6.Ex39.m1" class="ltx_Math" alttext="\int_{E_{n}}g\,d\mu=\int_{S}1_{E_{n}}g\,d\mu\,\big{\uparrow}\int_{S}1_{E}g\,d%
+\mu=\int_{E}g\,d\mu=\int_{S}g\,d\mu." display="block"><mrow><mrow><mrow><msub><mo largeop="true" symmetric="true">∫</mo><msub><mi>E</mi><mi>n</mi></msub></msub><mrow><mpadded width="+1.7pt"><mi>g</mi></mpadded><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>μ</mi></mrow></mrow></mrow><mo>=</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>S</mi></msub><mrow><msub><mn>1</mn><msub><mi>E</mi><mi>n</mi></msub></msub><mo>⁢</mo><mpadded width="+1.7pt"><mi>g</mi></mpadded><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mpadded width="+1.7pt"><mi>μ</mi></mpadded></mrow></mrow></mrow><mo mathsize="120%" stretchy="false">↑</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>S</mi></msub><mrow><msub><mn>1</mn><mi>E</mi></msub><mo>⁢</mo><mpadded width="+1.7pt"><mi>g</mi></mpadded><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>μ</mi></mrow></mrow></mrow><mo>=</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>E</mi></msub><mrow><mpadded width="+1.7pt"><mi>g</mi></mpadded><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>μ</mi></mrow></mrow></mrow><mo>=</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>S</mi></msub><mrow><mpadded width="+1.7pt"><mi>g</mi></mpadded><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>μ</mi></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Thus given <math id="S6.p2.m10" class="ltx_Math" alttext="\epsilon&gt;0" display="inline"><mrow><mi>ϵ</mi><mo>&gt;</mo><mn>0</mn></mrow></math> there exists <math id="S6.p2.m11" class="ltx_Math" alttext="n\in\mathbb{N}" display="inline"><mrow><mi>n</mi><mo>∈</mo><mi>ℕ</mi></mrow></math> such
+that</p>
+<table id="S6.Ex40" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S6.Ex40.m1" class="ltx_Math" alttext="\int_{S\setminus E_{n}}g\,d\mu=\int_{S}g\,d\mu-\int_{E_{n}}g\,d\mu&lt;\epsilon." display="block"><mrow><mrow><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mrow><mi>S</mi><mo>∖</mo><msub><mi>E</mi><mi>n</mi></msub></mrow></msub><mrow><mpadded width="+1.7pt"><mi>g</mi></mpadded><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>μ</mi></mrow></mrow></mrow><mo>=</mo><mrow><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>S</mi></msub><mrow><mpadded width="+1.7pt"><mi>g</mi></mpadded><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>μ</mi></mrow></mrow></mrow><mo>-</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><msub><mi>E</mi><mi>n</mi></msub></msub><mrow><mpadded width="+1.7pt"><mi>g</mi></mpadded><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>μ</mi></mrow></mrow></mrow></mrow><mo>&lt;</mo><mi>ϵ</mi></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Finally, since <math id="S6.p2.m12" class="ltx_Math" alttext="g\geq 1/n" display="inline"><mrow><mi>g</mi><mo>≥</mo><mrow><mn>1</mn><mo>/</mo><mi>n</mi></mrow></mrow></math> on <math id="S6.p2.m13" class="ltx_Math" alttext="E_{n}" display="inline"><msub><mi>E</mi><mi>n</mi></msub></math>,</p>
+<table id="S6.Ex41" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S6.Ex41.m1" class="ltx_Math" alttext="\int_{S}g^{p}\,d\mu\geq\int_{E_{n}}g^{p}\,d\mu\geq\mu(E_{n})/n." display="block"><mrow><mrow><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>S</mi></msub><mrow><mpadded width="+1.7pt"><msup><mi>g</mi><mi>p</mi></msup></mpadded><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>μ</mi></mrow></mrow></mrow><mo>≥</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><msub><mi>E</mi><mi>n</mi></msub></msub><mrow><mpadded width="+1.7pt"><msup><mi>g</mi><mi>p</mi></msup></mpadded><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>μ</mi></mrow></mrow></mrow><mo>≥</mo><mrow><mrow><mi>μ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>E</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>/</mo><mi>n</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Hence <math id="S6.p2.m14" class="ltx_Math" alttext="\mu(E_{n})\leq n\|f\|^{p}_{p}&lt;\infty" display="inline"><mrow><mrow><mi>μ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>E</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>≤</mo><mrow><mi>n</mi><mo>⁢</mo><msubsup><mrow><mo>∥</mo><mi>f</mi><mo>∥</mo></mrow><mi>p</mi><mi>p</mi></msubsup></mrow><mo>&lt;</mo><mi mathvariant="normal">∞</mi></mrow></math>.
+∎</p>
+</div>
+</div>
+<div id="Thmtheorem6" class="ltx_theorem ltx_theorem_lemma">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Lemma 6</span></span></h6>
+<div id="Thmtheorem6.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">The space of simple functions is a dense subspace of <math id="Thmtheorem6.p1.m1" class="ltx_Math" alttext="L^{p}" display="inline"><msup><mi>L</mi><mi>p</mi></msup></math> for <math id="Thmtheorem6.p1.m2" class="ltx_Math" alttext="1\leq p\leq\infty" display="inline"><mrow><mn mathvariant="normal">1</mn><mo mathvariant="normal">≤</mo><mi>p</mi><mo mathvariant="normal">≤</mo><mi mathvariant="normal">∞</mi></mrow></math>.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="S6.p3" class="ltx_para">
+<p class="ltx_p">We first prove the <math id="S6.p3.m1" class="ltx_Math" alttext="p&lt;\infty" display="inline"><mrow><mi>p</mi><mo>&lt;</mo><mi mathvariant="normal">∞</mi></mrow></math> case. Let <math id="S6.p3.m2" class="ltx_Math" alttext="f\in L^{p}" display="inline"><mrow><mi>f</mi><mo>∈</mo><msup><mi>L</mi><mi>p</mi></msup></mrow></math> and
+let <math id="S6.p3.m3" class="ltx_Math" alttext="\epsilon&gt;0" display="inline"><mrow><mi>ϵ</mi><mo>&gt;</mo><mn>0</mn></mrow></math>. Then there exists <math id="S6.p3.m4" class="ltx_Math" alttext="A\in\Sigma" display="inline"><mrow><mi>A</mi><mo>∈</mo><mi mathvariant="normal">Σ</mi></mrow></math> such that <math id="S6.p3.m5" class="ltx_Math" alttext="\mu(A)&lt;\infty" display="inline"><mrow><mrow><mi>μ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>&lt;</mo><mi mathvariant="normal">∞</mi></mrow></math> and <math id="S6.p3.m6" class="ltx_Math" alttext="\int_{S\setminus A}|f|^{p}d\mu&lt;(\epsilon/2)^{p}" display="inline"><mrow><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mrow><mi>S</mi><mo>∖</mo><mi>A</mi></mrow></msub><mrow><msup><mrow><mo stretchy="false">|</mo><mi>f</mi><mo stretchy="false">|</mo></mrow><mi>p</mi></msup><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>μ</mi></mrow></mrow></mrow><mo>&lt;</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>ϵ</mi><mo>/</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow><mi>p</mi></msup></mrow></math>. Let <math id="S6.p3.m7" class="ltx_Math" alttext="g=1_{A}f" display="inline"><mrow><mi>g</mi><mo>=</mo><mrow><msub><mn>1</mn><mi>A</mi></msub><mo>⁢</mo><mi>f</mi></mrow></mrow></math>. Then <math id="S6.p3.m8" class="ltx_Math" alttext="\|g-f\|_{p}&lt;\epsilon/2" display="inline"><mrow><msub><mrow><mo>∥</mo><mrow><mi>g</mi><mo>-</mo><mi>f</mi></mrow><mo>∥</mo></mrow><mi>p</mi></msub><mo>&lt;</mo><mrow><mi>ϵ</mi><mo>/</mo><mn>2</mn></mrow></mrow></math>.</p>
+</div>
+<div id="S6.p4" class="ltx_para">
+<p class="ltx_p">We define the sequence <math id="S6.p4.m1" class="ltx_Math" alttext="f_{n}" display="inline"><msub><mi>f</mi><mi>n</mi></msub></math> of simple functions by defining their positive and negative parts <math id="S6.p4.m2" class="ltx_Math" alttext="f_{n}^{+}" display="inline"><msubsup><mi>f</mi><mi>n</mi><mo>+</mo></msubsup></math> and <math id="S6.p4.m3" class="ltx_Math" alttext="f_{n}^{-}" display="inline"><msubsup><mi>f</mi><mi>n</mi><mo>-</mo></msubsup></math> as follows. For <math id="S6.p4.m4" class="ltx_Math" alttext="n\in\mathbb{N}" display="inline"><mrow><mi>n</mi><mo>∈</mo><mi>ℕ</mi></mrow></math></p>
+<table id="S6.Ex42" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S6.Ex42.m1" class="ltx_Math" alttext="f^{+}_{n}(x)=j\,2^{-n}" display="block"><mrow><mrow><msubsup><mi>f</mi><mi>n</mi><mo>+</mo></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>j</mi><mo>⁢</mo><msup><mn> 2</mn><mrow><mo>-</mo><mi>n</mi></mrow></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">provided <math id="S6.p4.m5" class="ltx_Math" alttext="j2^{-n}\leq g^{+}(x)&lt;(j+1)2^{-n}" display="inline"><mrow><mrow><mi>j</mi><mo>⁢</mo><msup><mn>2</mn><mrow><mo>-</mo><mi>n</mi></mrow></msup></mrow><mo>≤</mo><mrow><msup><mi>g</mi><mo>+</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>&lt;</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>j</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mn>2</mn><mrow><mo>-</mo><mi>n</mi></mrow></msup></mrow></mrow></math> for some integer <math id="S6.p4.m6" class="ltx_Math" alttext="0\leq j&lt;n2^{n}-1" display="inline"><mrow><mn>0</mn><mo>≤</mo><mi>j</mi><mo>&lt;</mo><mrow><mrow><mi>n</mi><mo>⁢</mo><msup><mn>2</mn><mi>n</mi></msup></mrow><mo>-</mo><mn>1</mn></mrow></mrow></math>,</p>
+<table id="S6.Ex43" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S6.Ex43.m1" class="ltx_Math" alttext="f_{n}^{+}(x)=n" display="block"><mrow><mrow><msubsup><mi>f</mi><mi>n</mi><mo>+</mo></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>n</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">otherwise (that is <math id="S6.p4.m7" class="ltx_Math" alttext="g^{+}(x)\geq n" display="inline"><mrow><mrow><msup><mi>g</mi><mo>+</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≥</mo><mi>n</mi></mrow></math>). Likewise define
+</p>
+<table id="S6.Ex44" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S6.Ex44.m1" class="ltx_Math" alttext="f^{-}_{n}(x)=j\,2^{-n}" display="block"><mrow><mrow><msubsup><mi>f</mi><mi>n</mi><mo>-</mo></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>j</mi><mo>⁢</mo><msup><mn> 2</mn><mrow><mo>-</mo><mi>n</mi></mrow></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">provided <math id="S6.p4.m8" class="ltx_Math" alttext="j2^{-n}\leq g^{-}(x)&lt;(j+1)2^{-n}" display="inline"><mrow><mrow><mi>j</mi><mo>⁢</mo><msup><mn>2</mn><mrow><mo>-</mo><mi>n</mi></mrow></msup></mrow><mo>≤</mo><mrow><msup><mi>g</mi><mo>-</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>&lt;</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>j</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mn>2</mn><mrow><mo>-</mo><mi>n</mi></mrow></msup></mrow></mrow></math> for some integer <math id="S6.p4.m9" class="ltx_Math" alttext="0\leq j&lt;n2^{n}-1" display="inline"><mrow><mn>0</mn><mo>≤</mo><mi>j</mi><mo>&lt;</mo><mrow><mrow><mi>n</mi><mo>⁢</mo><msup><mn>2</mn><mi>n</mi></msup></mrow><mo>-</mo><mn>1</mn></mrow></mrow></math>,</p>
+<table id="S6.Ex45" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S6.Ex45.m1" class="ltx_Math" alttext="f_{n}^{-}(x)=n" display="block"><mrow><mrow><msubsup><mi>f</mi><mi>n</mi><mo>-</mo></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>n</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">otherwise (that is <math id="S6.p4.m10" class="ltx_Math" alttext="g^{-}(x)\geq n" display="inline"><mrow><mrow><msup><mi>g</mi><mo>-</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≥</mo><mi>n</mi></mrow></math>). Define <math id="S6.p4.m11" class="ltx_Math" alttext="f_{n}=f^{+}_{n}-f^{-}_{n}" display="inline"><mrow><msub><mi>f</mi><mi>n</mi></msub><mo>=</mo><mrow><msubsup><mi>f</mi><mi>n</mi><mo>+</mo></msubsup><mo>-</mo><msubsup><mi>f</mi><mi>n</mi><mo>-</mo></msubsup></mrow></mrow></math>.</p>
+</div>
+<div id="S6.p5" class="ltx_para">
+<p class="ltx_p">We observe that for all <math id="S6.p5.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>, <math id="S6.p5.m2" class="ltx_Math" alttext="f_{n}=0" display="inline"><mrow><msub><mi>f</mi><mi>n</mi></msub><mo>=</mo><mn>0</mn></mrow></math> on <math id="S6.p5.m3" class="ltx_Math" alttext="S\setminus A" display="inline"><mrow><mi>S</mi><mo>∖</mo><mi>A</mi></mrow></math>.
+For <math id="S6.p5.m4" class="ltx_Math" alttext="n\in\mathbb{N}" display="inline"><mrow><mi>n</mi><mo>∈</mo><mi>ℕ</mi></mrow></math> define <math id="S6.p5.m5" class="ltx_Math" alttext="E_{n}=g^{-1}([-n,n])\cap A" display="inline"><mrow><msub><mi>E</mi><mi>n</mi></msub><mo>=</mo><mrow><mrow><msup><mi>g</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo stretchy="false">[</mo><mrow><mo>-</mo><mi>n</mi></mrow><mo>,</mo><mi>n</mi><mo stretchy="false">]</mo></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>∩</mo><mi>A</mi></mrow></mrow></math>. Then <math id="S6.p5.m6" class="ltx_Math" alttext="|f_{n}-g|&lt;2^{-(n-1)}" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mrow><msub><mi>f</mi><mi>n</mi></msub><mo>-</mo><mi>g</mi></mrow><mo stretchy="false">|</mo></mrow><mo>&lt;</mo><msup><mn>2</mn><mrow><mo>-</mo><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></msup></mrow></math> on <math id="S6.p5.m7" class="ltx_Math" alttext="E_{n}" display="inline"><msub><mi>E</mi><mi>n</mi></msub></math> for all <math id="S6.p5.m8" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>. Hence</p>
+<table id="S6.Ex46" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S6.Ex46.m1" class="ltx_Math" alttext="\int_{E_{n}}|f_{n}-g|^{p}\,d\mu\leq 2^{-(n-1)p}\mu(E_{n})." display="block"><mrow><mrow><mrow><msub><mo largeop="true" symmetric="true">∫</mo><msub><mi>E</mi><mi>n</mi></msub></msub><mrow><mpadded width="+1.7pt"><msup><mrow><mo stretchy="false">|</mo><mrow><msub><mi>f</mi><mi>n</mi></msub><mo>-</mo><mi>g</mi></mrow><mo stretchy="false">|</mo></mrow><mi>p</mi></msup></mpadded><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>μ</mi></mrow></mrow></mrow><mo>≤</mo><mrow><msup><mn>2</mn><mrow><mo>-</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>p</mi></mrow></mrow></msup><mo>⁢</mo><mi>μ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>E</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">For all <math id="S6.p5.m9" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>, since <math id="S6.p5.m10" class="ltx_Math" alttext="E_{n}\subset A" display="inline"><mrow><msub><mi>E</mi><mi>n</mi></msub><mo>⊂</mo><mi>A</mi></mrow></math>, we have that <math id="S6.p5.m11" class="ltx_Math" alttext="\mu(E_{n})&lt;\infty" display="inline"><mrow><mrow><mi>μ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>E</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>&lt;</mo><mi mathvariant="normal">∞</mi></mrow></math>. Hence <math id="S6.p5.m12" class="ltx_Math" alttext="\int_{E_{n}}|f_{n}-g|^{p}\,d\mu\to 0" display="inline"><mrow><mrow><msub><mo largeop="true" symmetric="true">∫</mo><msub><mi>E</mi><mi>n</mi></msub></msub><mrow><mpadded width="+1.7pt"><msup><mrow><mo stretchy="false">|</mo><mrow><msub><mi>f</mi><mi>n</mi></msub><mo>-</mo><mi>g</mi></mrow><mo stretchy="false">|</mo></mrow><mi>p</mi></msup></mpadded><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>μ</mi></mrow></mrow></mrow><mo>→</mo><mn>0</mn></mrow></math> as <math id="S6.p5.m13" class="ltx_Math" alttext="n\to\infty" display="inline"><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></math>.</p>
+</div>
+<div id="S6.p6" class="ltx_para">
+<p class="ltx_p">Moreover,
+on <math id="S6.p6.m1" class="ltx_Math" alttext="A\setminus E_{n}" display="inline"><mrow><mi>A</mi><mo>∖</mo><msub><mi>E</mi><mi>n</mi></msub></mrow></math> we have that <math id="S6.p6.m2" class="ltx_Math" alttext="|f_{n}-g|=|g|-n&lt;|g|" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mrow><msub><mi>f</mi><mi>n</mi></msub><mo>-</mo><mi>g</mi></mrow><mo stretchy="false">|</mo></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">|</mo><mi>g</mi><mo stretchy="false">|</mo></mrow><mo>-</mo><mi>n</mi></mrow><mo>&lt;</mo><mrow><mo stretchy="false">|</mo><mi>g</mi><mo stretchy="false">|</mo></mrow></mrow></math>,
+and hence</p>
+<table id="S6.Ex47" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S6.Ex47.m1" class="ltx_Math" alttext="\int_{A\setminus E_{n}}|f_{n}-g|^{p}\,d\mu\leq\int_{A\setminus E_{n}}|g|^{p}\,%
+d\mu." display="block"><mrow><mrow><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mrow><mi>A</mi><mo>∖</mo><msub><mi>E</mi><mi>n</mi></msub></mrow></msub><mrow><mpadded width="+1.7pt"><msup><mrow><mo stretchy="false">|</mo><mrow><msub><mi>f</mi><mi>n</mi></msub><mo>-</mo><mi>g</mi></mrow><mo stretchy="false">|</mo></mrow><mi>p</mi></msup></mpadded><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>μ</mi></mrow></mrow></mrow><mo>≤</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mrow><mi>A</mi><mo>∖</mo><msub><mi>E</mi><mi>n</mi></msub></mrow></msub><mrow><mpadded width="+1.7pt"><msup><mrow><mo stretchy="false">|</mo><mi>g</mi><mo stretchy="false">|</mo></mrow><mi>p</mi></msup></mpadded><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>μ</mi></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">We also observe that <math id="S6.p6.m3" class="ltx_Math" alttext="E_{n}\uparrow E" display="inline"><mrow><msub><mi>E</mi><mi>n</mi></msub><mo>↑</mo><mi>E</mi></mrow></math> where <math id="S6.p6.m4" class="ltx_Math" alttext="E=\cup_{n}E_{n}=A" display="inline"><mrow><mi>E</mi><mo>=</mo><mrow><msub><mo>∪</mo><mi>n</mi></msub><msub><mi>E</mi><mi>n</mi></msub></mrow><mo>=</mo><mi>A</mi></mrow></math> since we can suppose that for each <math id="S6.p6.m5" class="ltx_Math" alttext="x\in S" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>S</mi></mrow></math>, <math id="S6.p6.m6" class="ltx_Math" alttext="g(x)\in\mathbb{R}" display="inline"><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∈</mo><mi>ℝ</mi></mrow></math> (not <math id="S6.p6.m7" class="ltx_Math" alttext="+\infty" display="inline"><mrow><mo>+</mo><mi mathvariant="normal">∞</mi></mrow></math> or <math id="S6.p6.m8" class="ltx_Math" alttext="-\infty" display="inline"><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow></math>).
+Hence <math id="S6.p6.m9" class="ltx_Math" alttext="1_{A\setminus E_{n}}|f_{n}-g|^{p}\to 0" display="inline"><mrow><mrow><msub><mn>1</mn><mrow><mi>A</mi><mo>∖</mo><msub><mi>E</mi><mi>n</mi></msub></mrow></msub><mo>⁢</mo><msup><mrow><mo stretchy="false">|</mo><mrow><msub><mi>f</mi><mi>n</mi></msub><mo>-</mo><mi>g</mi></mrow><mo stretchy="false">|</mo></mrow><mi>p</mi></msup></mrow><mo>→</mo><mn>0</mn></mrow></math> a.e. Since <math id="S6.p6.m10" class="ltx_Math" alttext="1_{A\setminus E_{n}}|f_{n}-g|^{p}\leq|g|^{p}" display="inline"><mrow><mrow><msub><mn>1</mn><mrow><mi>A</mi><mo>∖</mo><msub><mi>E</mi><mi>n</mi></msub></mrow></msub><mo>⁢</mo><msup><mrow><mo stretchy="false">|</mo><mrow><msub><mi>f</mi><mi>n</mi></msub><mo>-</mo><mi>g</mi></mrow><mo stretchy="false">|</mo></mrow><mi>p</mi></msup></mrow><mo>≤</mo><msup><mrow><mo stretchy="false">|</mo><mi>g</mi><mo stretchy="false">|</mo></mrow><mi>p</mi></msup></mrow></math> and <math id="S6.p6.m11" class="ltx_Math" alttext="|g|^{p}" display="inline"><msup><mrow><mo stretchy="false">|</mo><mi>g</mi><mo stretchy="false">|</mo></mrow><mi>p</mi></msup></math> is integrable, by the dominated convergence theorem</p>
+<table id="S6.Ex48" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S6.Ex48.m1" class="ltx_Math" alttext="\int_{A\setminus E_{n}}|f_{n}-g|^{p}\,d\mu\to 0." display="block"><mrow><mrow><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mrow><mi>A</mi><mo>∖</mo><msub><mi>E</mi><mi>n</mi></msub></mrow></msub><mrow><mpadded width="+1.7pt"><msup><mrow><mo stretchy="false">|</mo><mrow><msub><mi>f</mi><mi>n</mi></msub><mo>-</mo><mi>g</mi></mrow><mo stretchy="false">|</mo></mrow><mi>p</mi></msup></mpadded><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>μ</mi></mrow></mrow></mrow><mo>→</mo><mn>0</mn></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Thus, noting that <math id="S6.p6.m12" class="ltx_Math" alttext="f_{n}" display="inline"><msub><mi>f</mi><mi>n</mi></msub></math> and <math id="S6.p6.m13" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> vanish off of <math id="S6.p6.m14" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>, we have</p>
+<table id="S6.Ex49" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S6.Ex49.m1" class="ltx_Math" alttext="\int_{S}|f_{n}-g|^{p}\,d\mu=\int_{E_{n}}|f_{n}-g|^{p}\,d\mu+\int_{A\setminus E%
+_{n}}|f_{n}-g|^{p}\,d\mu\to 0." display="block"><mrow><mrow><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>S</mi></msub><mrow><mpadded width="+1.7pt"><msup><mrow><mo stretchy="false">|</mo><mrow><msub><mi>f</mi><mi>n</mi></msub><mo>-</mo><mi>g</mi></mrow><mo stretchy="false">|</mo></mrow><mi>p</mi></msup></mpadded><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>μ</mi></mrow></mrow></mrow><mo>=</mo><mrow><mrow><msub><mo largeop="true" symmetric="true">∫</mo><msub><mi>E</mi><mi>n</mi></msub></msub><mrow><mpadded width="+1.7pt"><msup><mrow><mo stretchy="false">|</mo><mrow><msub><mi>f</mi><mi>n</mi></msub><mo>-</mo><mi>g</mi></mrow><mo stretchy="false">|</mo></mrow><mi>p</mi></msup></mpadded><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>μ</mi></mrow></mrow></mrow><mo>+</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mrow><mi>A</mi><mo>∖</mo><msub><mi>E</mi><mi>n</mi></msub></mrow></msub><mrow><mpadded width="+1.7pt"><msup><mrow><mo stretchy="false">|</mo><mrow><msub><mi>f</mi><mi>n</mi></msub><mo>-</mo><mi>g</mi></mrow><mo stretchy="false">|</mo></mrow><mi>p</mi></msup></mpadded><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>μ</mi></mrow></mrow></mrow></mrow><mo>→</mo><mn>0</mn></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Consequently, there exists <math id="S6.p6.m15" class="ltx_Math" alttext="n\in\mathbb{N}" display="inline"><mrow><mi>n</mi><mo>∈</mo><mi>ℕ</mi></mrow></math> such that
+the simple function <math id="S6.p6.m16" class="ltx_Math" alttext="f_{n}" display="inline"><msub><mi>f</mi><mi>n</mi></msub></math> satisfies <math id="S6.p6.m17" class="ltx_Math" alttext="\|f_{n}-g\|_{p}&lt;\epsilon/2" display="inline"><mrow><msub><mrow><mo>∥</mo><mrow><msub><mi>f</mi><mi>n</mi></msub><mo>-</mo><mi>g</mi></mrow><mo>∥</mo></mrow><mi>p</mi></msub><mo>&lt;</mo><mrow><mi>ϵ</mi><mo>/</mo><mn>2</mn></mrow></mrow></math>. Hence <math id="S6.p6.m18" class="ltx_Math" alttext="\|f_{n}-f\|_{p}&lt;\epsilon" display="inline"><mrow><msub><mrow><mo>∥</mo><mrow><msub><mi>f</mi><mi>n</mi></msub><mo>-</mo><mi>f</mi></mrow><mo>∥</mo></mrow><mi>p</mi></msub><mo>&lt;</mo><mi>ϵ</mi></mrow></math>, which completes the proof for <math id="S6.p6.m19" class="ltx_Math" alttext="p&lt;\infty" display="inline"><mrow><mi>p</mi><mo>&lt;</mo><mi mathvariant="normal">∞</mi></mrow></math> case.</p>
+</div>
+<div id="S6.p7" class="ltx_para">
+<p class="ltx_p">For the <math id="S6.p7.m1" class="ltx_Math" alttext="p=\infty" display="inline"><mrow><mi>p</mi><mo>=</mo><mi mathvariant="normal">∞</mi></mrow></math> case, let <math id="S6.p7.m2" class="ltx_Math" alttext="f\in L^{\infty}" display="inline"><mrow><mi>f</mi><mo>∈</mo><msup><mi>L</mi><mi mathvariant="normal">∞</mi></msup></mrow></math>.
+Define a sequence <math id="S6.p7.m3" class="ltx_Math" alttext="(f_{n})" display="inline"><mrow><mo stretchy="false">(</mo><msub><mi>f</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></math> of simple functions as before.</p>
+<table id="S6.Ex50" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S6.Ex50.m1" class="ltx_Math" alttext="f_{n}^{\pm}(x)=j2^{-n}" display="block"><mrow><mrow><msubsup><mi>f</mi><mi>n</mi><mo>±</mo></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>j</mi><mo>⁢</mo><msup><mn>2</mn><mrow><mo>-</mo><mi>n</mi></mrow></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">if <math id="S6.p7.m4" class="ltx_Math" alttext="j2^{-n}\leq f^{\pm}(x)&lt;(j+1)2^{-n}" display="inline"><mrow><mrow><mi>j</mi><mo>⁢</mo><msup><mn>2</mn><mrow><mo>-</mo><mi>n</mi></mrow></msup></mrow><mo>≤</mo><mrow><msup><mi>f</mi><mo>±</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>&lt;</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>j</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mn>2</mn><mrow><mo>-</mo><mi>n</mi></mrow></msup></mrow></mrow></math> for some <math id="S6.p7.m5" class="ltx_Math" alttext="0\leq j&lt;n2^{n}-1" display="inline"><mrow><mn>0</mn><mo>≤</mo><mi>j</mi><mo>&lt;</mo><mrow><mrow><mi>n</mi><mo>⁢</mo><msup><mn>2</mn><mi>n</mi></msup></mrow><mo>-</mo><mn>1</mn></mrow></mrow></math>. Otherwise <math id="S6.p7.m6" class="ltx_Math" alttext="f_{n}^{\pm}(x)=n" display="inline"><mrow><mrow><msubsup><mi>f</mi><mi>n</mi><mo>±</mo></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>n</mi></mrow></math>.
+Then <math id="S6.p7.m7" class="ltx_Math" alttext="|f_{n}-f|&lt;2^{-(n-1)}" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mrow><msub><mi>f</mi><mi>n</mi></msub><mo>-</mo><mi>f</mi></mrow><mo stretchy="false">|</mo></mrow><mo>&lt;</mo><msup><mn>2</mn><mrow><mo>-</mo><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></msup></mrow></math> a.e. for all <math id="S6.p7.m8" class="ltx_Math" alttext="n&gt;\|f\|_{\infty}" display="inline"><mrow><mi>n</mi><mo>&gt;</mo><msub><mrow><mo>∥</mo><mi>f</mi><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi></msub></mrow></math>. Thus <math id="S6.p7.m9" class="ltx_Math" alttext="\|f_{n}-f\|_{\infty}\to 0" display="inline"><mrow><msub><mrow><mo>∥</mo><mrow><msub><mi>f</mi><mi>n</mi></msub><mo>-</mo><mi>f</mi></mrow><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi></msub><mo>→</mo><mn>0</mn></mrow></math>. This proves the <math id="S6.p7.m10" class="ltx_Math" alttext="p=\infty" display="inline"><mrow><mi>p</mi><mo>=</mo><mi mathvariant="normal">∞</mi></mrow></math> case.
+∎</p>
+</div>
+</div>
+<div id="Thmtheorem7" class="ltx_theorem ltx_theorem_corollary">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Corollary 7</span></span></h6>
+<div id="Thmtheorem7.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <math id="Thmtheorem7.p1.m1" class="ltx_Math" alttext="\phi\in(L^{p})^{*}" display="inline"><mrow><mi>ϕ</mi><mo mathvariant="normal">∈</mo><msup><mrow><mo mathvariant="normal" stretchy="false">(</mo><msup><mi>L</mi><mi>p</mi></msup><mo mathvariant="normal" stretchy="false">)</mo></mrow><mo mathvariant="normal">*</mo></msup></mrow></math> be a continuous linear functional.
+Suppose <math id="Thmtheorem7.p1.m2" class="ltx_Math" alttext="\phi(1_{A})=0" display="inline"><mrow><mrow><mi>ϕ</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><msub><mn mathvariant="normal">1</mn><mi>A</mi></msub><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow><mo mathvariant="normal">=</mo><mn mathvariant="normal">0</mn></mrow></math> for all <math id="Thmtheorem7.p1.m3" class="ltx_Math" alttext="A\in\Sigma" display="inline"><mrow><mi>A</mi><mo mathvariant="normal">∈</mo><mi mathvariant="normal">Σ</mi></mrow></math>. Then <math id="Thmtheorem7.p1.m4" class="ltx_Math" alttext="\phi=0" display="inline"><mrow><mi>ϕ</mi><mo mathvariant="normal">=</mo><mn mathvariant="normal">0</mn></mrow></math>.</span></p>
+</div>
+</div>
+</section>
+<section id="S7" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">7 </span>Riesz representation theorem</h2>
+
+<div id="S7.p1" class="ltx_para">
+<p class="ltx_p">In the study of <math id="S7.p1.m1" class="ltx_Math" alttext="\ell^{p}" display="inline"><msup><mi mathvariant="normal">ℓ</mi><mi>p</mi></msup></math> spaces we showed that for <math id="S7.p1.m2" class="ltx_Math" alttext="1\leq p&lt;\infty" display="inline"><mrow><mn>1</mn><mo>≤</mo><mi>p</mi><mo>&lt;</mo><mi mathvariant="normal">∞</mi></mrow></math>, the dual space of <math id="S7.p1.m3" class="ltx_Math" alttext="\ell^{p}" display="inline"><msup><mi mathvariant="normal">ℓ</mi><mi>p</mi></msup></math> is isometrically isomorphic to <math id="S7.p1.m4" class="ltx_Math" alttext="\ell^{q}" display="inline"><msup><mi mathvariant="normal">ℓ</mi><mi>q</mi></msup></math> where <math id="S7.p1.m5" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> is the conjugate of <math id="S7.p1.m6" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math>.
+This result is a special case of the more general result also known as the <span class="ltx_text ltx_font_italic">Riesz representation theorem</span>.</p>
+</div>
+<div id="Thmtheorem8" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Theorem 8</span></span><span class="ltx_text ltx_font_bold"> </span>(Riesz Representation Theorem)</h6>
+<div id="Thmtheorem8.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <math id="Thmtheorem8.p1.m1" class="ltx_Math" alttext="(S,\Sigma,\mu)" display="inline"><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>S</mi><mo mathvariant="normal">,</mo><mi mathvariant="normal">Σ</mi><mo mathvariant="normal">,</mo><mi>μ</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></math> be a <math id="Thmtheorem8.p1.m2" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math>-finite measure space. We denote <math id="Thmtheorem8.p1.m3" class="ltx_Math" alttext="L^{p}(S,\Sigma,\mu)" display="inline"><mrow><msup><mi>L</mi><mi>p</mi></msup><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>S</mi><mo mathvariant="normal">,</mo><mi mathvariant="normal">Σ</mi><mo mathvariant="normal">,</mo><mi>μ</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></math> by <math id="Thmtheorem8.p1.m4" class="ltx_Math" alttext="L^{p}" display="inline"><msup><mi>L</mi><mi>p</mi></msup></math>. Let <math id="Thmtheorem8.p1.m5" class="ltx_Math" alttext="1\leq p&lt;\infty" display="inline"><mrow><mn mathvariant="normal">1</mn><mo mathvariant="normal">≤</mo><mi>p</mi><mo mathvariant="normal">&lt;</mo><mi mathvariant="normal">∞</mi></mrow></math> and <math id="Thmtheorem8.p1.m6" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> be its conjugate. Define the operator <math id="Thmtheorem8.p1.m7" class="ltx_Math" alttext="R:L^{q}\to{(L^{p})}^{*}" display="inline"><mrow><mi>R</mi><mo mathvariant="normal">:</mo><mrow><msup><mi>L</mi><mi>q</mi></msup><mo mathvariant="normal">→</mo><msup><mrow><mo mathvariant="normal" stretchy="false">(</mo><msup><mi>L</mi><mi>p</mi></msup><mo mathvariant="normal" stretchy="false">)</mo></mrow><mo mathvariant="normal">*</mo></msup></mrow></mrow></math> by</span></p>
+<table id="S7.Ex51" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S7.Ex51.m1" class="ltx_Math" alttext="R(g)(f)=\int_{S}fg\,d\mu," display="block"><mrow><mrow><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>g</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>f</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>S</mi></msub><mrow><mi>f</mi><mo>⁢</mo><mpadded width="+1.7pt"><mi>g</mi></mpadded><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>μ</mi></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">for all <math id="Thmtheorem8.p1.m8" class="ltx_Math" alttext="g\in L^{q}" display="inline"><mrow><mi>g</mi><mo mathvariant="normal">∈</mo><msup><mi>L</mi><mi>q</mi></msup></mrow></math> and <math id="Thmtheorem8.p1.m9" class="ltx_Math" alttext="f\in L^{p}" display="inline"><mrow><mi>f</mi><mo mathvariant="normal">∈</mo><msup><mi>L</mi><mi>p</mi></msup></mrow></math>. Then <math id="Thmtheorem8.p1.m10" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> is an isometric isomorphism.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="S7.p2" class="ltx_para">
+<p class="ltx_p">We sketch the proof here. First we note that that <math id="S7.p2.m1" class="ltx_Math" alttext="fg" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mi>g</mi></mrow></math> is integrable for all <math id="S7.p2.m2" class="ltx_Math" alttext="g\in L^{q}" display="inline"><mrow><mi>g</mi><mo>∈</mo><msup><mi>L</mi><mi>q</mi></msup></mrow></math> and all <math id="S7.p2.m3" class="ltx_Math" alttext="f\in L^{p}" display="inline"><mrow><mi>f</mi><mo>∈</mo><msup><mi>L</mi><mi>p</mi></msup></mrow></math> by the Holder’s inequality. Thus, <math id="S7.p2.m4" class="ltx_Math" alttext="R(g)" display="inline"><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>g</mi><mo stretchy="false">)</mo></mrow></mrow></math> defines a linear functional on <math id="S7.p2.m5" class="ltx_Math" alttext="L^{p}" display="inline"><msup><mi>L</mi><mi>p</mi></msup></math>. Also, from the Holder’s inequality, <math id="S7.p2.m6" class="ltx_Math" alttext="|R(g)(f))|=|\int_{S}fgd\mu|\leq\|f\|_{p}\|g\|_{q}" display="inline"><mrow><mo stretchy="false">|</mo><mi>R</mi><mrow><mo stretchy="false">(</mo><mi>g</mi><mo stretchy="false">)</mo></mrow><mrow><mo stretchy="false">(</mo><mi>f</mi><mo stretchy="false">)</mo></mrow><mo stretchy="false">)</mo><mo stretchy="false">|</mo><mo>=</mo><mo stretchy="false">|</mo><mo largeop="true" symmetric="true">∫</mo><msub><mi></mi><mi>S</mi></msub><mi>f</mi><mi>g</mi><mi>d</mi><mi>μ</mi><mo stretchy="false">|</mo><mo>≤</mo><mo>∥</mo><mi>f</mi><mo>∥</mo><msub><mi></mi><mi>p</mi></msub><mo>∥</mo><mi>g</mi><mo>∥</mo><msub><mi></mi><mi>q</mi></msub></mrow></math> and thus <math id="S7.p2.m7" class="ltx_Math" alttext="R(g)" display="inline"><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>g</mi><mo stretchy="false">)</mo></mrow></mrow></math> is a bounded linear functional. This ensures that <math id="S7.p2.m8" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> is well defined,. It is easy to see that <math id="S7.p2.m9" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> is linear, and it is also clear that <math id="S7.p2.m10" class="ltx_Math" alttext="\|R(g)\|\leq\|g\|_{q}" display="inline"><mrow><mrow><mo>∥</mo><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>g</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∥</mo></mrow><mo>≤</mo><msub><mrow><mo>∥</mo><mi>g</mi><mo>∥</mo></mrow><mi>q</mi></msub></mrow></math>.</p>
+</div>
+<div id="S7.p3" class="ltx_para">
+<p class="ltx_p">Next we show that <math id="S7.p3.m1" class="ltx_Math" alttext="\|R(g)\|=\|g\|_{q}" display="inline"><mrow><mrow><mo>∥</mo><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>g</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∥</mo></mrow><mo>=</mo><msub><mrow><mo>∥</mo><mi>g</mi><mo>∥</mo></mrow><mi>q</mi></msub></mrow></math>. If <math id="S7.p3.m2" class="ltx_Math" alttext="g=0" display="inline"><mrow><mi>g</mi><mo>=</mo><mn>0</mn></mrow></math> this is obvious.
+If <math id="S7.p3.m3" class="ltx_Math" alttext="g\neq 0" display="inline"><mrow><mi>g</mi><mo>≠</mo><mn>0</mn></mrow></math>, then we consider the case of <math id="S7.p3.m4" class="ltx_Math" alttext="1&lt;p&lt;\infty" display="inline"><mrow><mn>1</mn><mo>&lt;</mo><mi>p</mi><mo>&lt;</mo><mi mathvariant="normal">∞</mi></mrow></math> so that <math id="S7.p3.m5" class="ltx_Math" alttext="1&lt;q&lt;\infty" display="inline"><mrow><mn>1</mn><mo>&lt;</mo><mi>q</mi><mo>&lt;</mo><mi mathvariant="normal">∞</mi></mrow></math>.
+Then, choosing <math id="S7.p3.m6" class="ltx_Math" alttext="f=g^{*}" display="inline"><mrow><mi>f</mi><mo>=</mo><msup><mi>g</mi><mo>*</mo></msup></mrow></math> to be the conjugate function defined in the Holder’s inequality theorem, we see that <math id="S7.p3.m7" class="ltx_Math" alttext="f\in L_{p}" display="inline"><mrow><mi>f</mi><mo>∈</mo><msub><mi>L</mi><mi>p</mi></msub></mrow></math>, <math id="S7.p3.m8" class="ltx_Math" alttext="\|f\|_{p}=1" display="inline"><mrow><msub><mrow><mo>∥</mo><mi>f</mi><mo>∥</mo></mrow><mi>p</mi></msub><mo>=</mo><mn>1</mn></mrow></math> and that <math id="S7.p3.m9" class="ltx_Math" alttext="R(g)(f)=\int_{S}fgd\mu=\|g\|_{q}" display="inline"><mrow><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>g</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>f</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>S</mi></msub><mrow><mi>f</mi><mo>⁢</mo><mi>g</mi><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>μ</mi></mrow></mrow></mrow><mo>=</mo><msub><mrow><mo>∥</mo><mi>g</mi><mo>∥</mo></mrow><mi>q</mi></msub></mrow></math>.
+This shows that <math id="S7.p3.m10" class="ltx_Math" alttext="\|R(g)\|\geq\|g\|_{q}" display="inline"><mrow><mrow><mo>∥</mo><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>g</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∥</mo></mrow><mo>≥</mo><msub><mrow><mo>∥</mo><mi>g</mi><mo>∥</mo></mrow><mi>q</mi></msub></mrow></math>. So we conclude that <math id="S7.p3.m11" class="ltx_Math" alttext="\|R(g)\|=\|g\|_{q}" display="inline"><mrow><mrow><mo>∥</mo><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>g</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∥</mo></mrow><mo>=</mo><msub><mrow><mo>∥</mo><mi>g</mi><mo>∥</mo></mrow><mi>q</mi></msub></mrow></math> (for the case of <math id="S7.p3.m12" class="ltx_Math" alttext="1&lt;p&lt;\infty" display="inline"><mrow><mn>1</mn><mo>&lt;</mo><mi>p</mi><mo>&lt;</mo><mi mathvariant="normal">∞</mi></mrow></math>). If <math id="S7.p3.m13" class="ltx_Math" alttext="p=1" display="inline"><mrow><mi>p</mi><mo>=</mo><mn>1</mn></mrow></math>, then <math id="S7.p3.m14" class="ltx_Math" alttext="q=\infty" display="inline"><mrow><mi>q</mi><mo>=</mo><mi mathvariant="normal">∞</mi></mrow></math>, and the conjugate function of <math id="S7.p3.m15" class="ltx_Math" alttext="g\in L^{\infty}" display="inline"><mrow><mi>g</mi><mo>∈</mo><msup><mi>L</mi><mi mathvariant="normal">∞</mi></msup></mrow></math> is not defined. So we proceed differently. Let <math id="S7.p3.m16" class="ltx_Math" alttext="\epsilon&gt;0" display="inline"><mrow><mi>ϵ</mi><mo>&gt;</mo><mn>0</mn></mrow></math>. Then the set <math id="S7.p3.m17" class="ltx_Math" alttext="G=\{x\in S\,|\,|g(x)|&gt;\|g\|_{\infty}-\epsilon\}" display="inline"><mrow><mi>G</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>x</mi><mo>∈</mo><mpadded width="+1.7pt"><mi>S</mi></mpadded></mrow><mo rspace="4.2pt" stretchy="false">|</mo><mrow><mrow><mo stretchy="false">|</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mo>&gt;</mo><mrow><msub><mrow><mo>∥</mo><mi>g</mi><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi></msub><mo>-</mo><mi>ϵ</mi></mrow></mrow><mo stretchy="false">}</mo></mrow></mrow></math> has positive measure. Since <math id="S7.p3.m18" class="ltx_Math" alttext="\mu" display="inline"><mi>μ</mi></math> is a <math id="S7.p3.m19" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math>-finite, there exists a set <math id="S7.p3.m20" class="ltx_Math" alttext="A\in\Sigma" display="inline"><mrow><mi>A</mi><mo>∈</mo><mi mathvariant="normal">Σ</mi></mrow></math> such that <math id="S7.p3.m21" class="ltx_Math" alttext="0&lt;\mu(A)&lt;\infty" display="inline"><mrow><mn>0</mn><mo>&lt;</mo><mrow><mi>μ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>&lt;</mo><mi mathvariant="normal">∞</mi></mrow></math> and <math id="S7.p3.m22" class="ltx_Math" alttext="A\subset G" display="inline"><mrow><mi>A</mi><mo>⊂</mo><mi>G</mi></mrow></math>. Define</p>
+<table id="S7.Ex52" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S7.Ex52.m1" class="ltx_Math" alttext="f=\frac{\text{sgn}(g)\,1_{A}}{\mu(A)}." display="block"><mrow><mrow><mi>f</mi><mo>=</mo><mfrac><mrow><mtext>sgn</mtext><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>g</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mn> 1</mn><mi>A</mi></msub></mrow><mrow><mi>μ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow></mfrac></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Then <math id="S7.p3.m23" class="ltx_Math" alttext="f\in L_{1}=L_{p}" display="inline"><mrow><mi>f</mi><mo>∈</mo><msub><mi>L</mi><mn>1</mn></msub><mo>=</mo><msub><mi>L</mi><mi>p</mi></msub></mrow></math>,
+<math id="S7.p3.m24" class="ltx_Math" alttext="\|f\|_{1}=1" display="inline"><mrow><msub><mrow><mo>∥</mo><mi>f</mi><mo>∥</mo></mrow><mn>1</mn></msub><mo>=</mo><mn>1</mn></mrow></math>
+and <math id="S7.p3.m25" class="ltx_Math" alttext="R(g)(f)=\int_{S}fgd\mu=\frac{1}{\mu(A)}\int_{A}|g|d\mu\geq\|g\|_{\infty}-\epsilon" display="inline"><mrow><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>g</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>f</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>S</mi></msub><mrow><mi>f</mi><mo>⁢</mo><mi>g</mi><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>μ</mi></mrow></mrow></mrow><mo>=</mo><mrow><mfrac><mn>1</mn><mrow><mi>μ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow></mfrac><mo>⁢</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>A</mi></msub><mrow><mrow><mo stretchy="false">|</mo><mi>g</mi><mo stretchy="false">|</mo></mrow><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>μ</mi></mrow></mrow></mrow></mrow><mo>≥</mo><mrow><msub><mrow><mo>∥</mo><mi>g</mi><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi></msub><mo>-</mo><mi>ϵ</mi></mrow></mrow></math>. As this holds for all <math id="S7.p3.m26" class="ltx_Math" alttext="\epsilon&gt;0" display="inline"><mrow><mi>ϵ</mi><mo>&gt;</mo><mn>0</mn></mrow></math>, we conclude that</p>
+<table id="S7.Ex53" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S7.Ex53.m1" class="ltx_Math" alttext="\sup\left\{|R(g)(f)|\,\,|\,f\in L_{1},\,\,\|f\|_{1}=1\right\}\geq\|g\|_{\infty}." display="block"><mrow><mrow><mrow><mo movablelimits="false">sup</mo><mo>⁡</mo><mrow><mo>{</mo><mrow><mrow><mrow><mrow><mo stretchy="false">|</mo><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>g</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>f</mi><mo stretchy="false">)</mo></mrow></mrow><mo rspace="5.8pt" stretchy="false">|</mo></mrow><mo lspace="2.5pt" rspace="4.2pt" stretchy="false">|</mo><mi>f</mi></mrow><mo>∈</mo><msub><mi>L</mi><mn>1</mn></msub></mrow><mo rspace="5.8pt">,</mo><mrow><msub><mrow><mo>∥</mo><mi>f</mi><mo>∥</mo></mrow><mn>1</mn></msub><mo>=</mo><mn>1</mn></mrow></mrow><mo>}</mo></mrow></mrow><mo>≥</mo><msub><mrow><mo>∥</mo><mi>g</mi><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi></msub></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Hence <math id="S7.p3.m27" class="ltx_Math" alttext="\|R(g)\|\geq\|g\|_{\infty}" display="inline"><mrow><mrow><mo>∥</mo><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>g</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∥</mo></mrow><mo>≥</mo><msub><mrow><mo>∥</mo><mi>g</mi><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi></msub></mrow></math>. Since the reverse inequality was shown earlier, we conclude that <math id="S7.p3.m28" class="ltx_Math" alttext="\|R(g)\|=\|g\|_{\infty}" display="inline"><mrow><mrow><mo>∥</mo><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>g</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∥</mo></mrow><mo>=</mo><msub><mrow><mo>∥</mo><mi>g</mi><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi></msub></mrow></math>.</p>
+</div>
+<div id="S7.p4" class="ltx_para">
+<p class="ltx_p">Thus, we have established that <math id="S7.p4.m1" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> is a linear isometry from <math id="S7.p4.m2" class="ltx_Math" alttext="L^{q}" display="inline"><msup><mi>L</mi><mi>q</mi></msup></math> into <math id="S7.p4.m3" class="ltx_Math" alttext="(L^{p})^{*}" display="inline"><msup><mrow><mo stretchy="false">(</mo><msup><mi>L</mi><mi>p</mi></msup><mo stretchy="false">)</mo></mrow><mo>*</mo></msup></math>. As a linear isometry, it is an injection. It remains to show that it is a surjection.
+Given <math id="S7.p4.m4" class="ltx_Math" alttext="\varphi\in(L^{p})^{*}" display="inline"><mrow><mi>φ</mi><mo>∈</mo><msup><mrow><mo stretchy="false">(</mo><msup><mi>L</mi><mi>p</mi></msup><mo stretchy="false">)</mo></mrow><mo>*</mo></msup></mrow></math> with <math id="S7.p4.m5" class="ltx_Math" alttext="\varphi\neq 0" display="inline"><mrow><mi>φ</mi><mo>≠</mo><mn>0</mn></mrow></math>, we need to show
+that there exists <math id="S7.p4.m6" class="ltx_Math" alttext="g\in L^{q}" display="inline"><mrow><mi>g</mi><mo>∈</mo><msup><mi>L</mi><mi>q</mi></msup></mrow></math> such that <math id="S7.p4.m7" class="ltx_Math" alttext="R(g)=\varphi" display="inline"><mrow><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>g</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>φ</mi></mrow></math>. This is done via the use of the Radon-Nikodym theorem.</p>
+</div>
+<div id="S7.p5" class="ltx_para">
+<p class="ltx_p">We only provide a sketch of the proof. First one considers the case when <math id="S7.p5.m1" class="ltx_Math" alttext="\mu(S)&lt;\infty" display="inline"><mrow><mrow><mi>μ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>S</mi><mo stretchy="false">)</mo></mrow></mrow><mo>&lt;</mo><mi mathvariant="normal">∞</mi></mrow></math>. Define <math id="S7.p5.m2" class="ltx_Math" alttext="\nu:\Sigma\to\mathbb{R}" display="inline"><mrow><mi>ν</mi><mo>:</mo><mrow><mi mathvariant="normal">Σ</mi><mo>→</mo><mi>ℝ</mi></mrow></mrow></math> as follows. For each <math id="S7.p5.m3" class="ltx_Math" alttext="A\in\Sigma" display="inline"><mrow><mi>A</mi><mo>∈</mo><mi mathvariant="normal">Σ</mi></mrow></math>, we set <math id="S7.p5.m4" class="ltx_Math" alttext="\nu(A)=\varphi(1_{A})" display="inline"><mrow><mrow><mi>ν</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>φ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mn>1</mn><mi>A</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. This makes sense, since
+<math id="S7.p5.m5" class="ltx_Math" alttext="1_{A}\in L^{p}" display="inline"><mrow><msub><mn>1</mn><mi>A</mi></msub><mo>∈</mo><msup><mi>L</mi><mi>p</mi></msup></mrow></math> as <math id="S7.p5.m6" class="ltx_Math" alttext="\mu(A)&lt;\infty" display="inline"><mrow><mrow><mi>μ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>&lt;</mo><mi mathvariant="normal">∞</mi></mrow></math>. Then it can be shown that <math id="S7.p5.m7" class="ltx_Math" alttext="\nu" display="inline"><mi>ν</mi></math> is a finite signed measure and that <math id="S7.p5.m8" class="ltx_Math" alttext="\nu\ll\mu" display="inline"><mrow><mi>ν</mi><mo>≪</mo><mi>μ</mi></mrow></math>. Then by the Radon-Nikodym theorem there exists an integrable function <math id="S7.p5.m9" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> such that <math id="S7.p5.m10" class="ltx_Math" alttext="\varphi(1_{A})=\nu(A)=\int_{A}gd\mu=\int_{S}1_{A}gd\mu" display="inline"><mrow><mrow><mi>φ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mn>1</mn><mi>A</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>ν</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>A</mi></msub><mrow><mi>g</mi><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>μ</mi></mrow></mrow></mrow><mo>=</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>S</mi></msub><mrow><msub><mn>1</mn><mi>A</mi></msub><mo>⁢</mo><mi>g</mi><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>μ</mi></mrow></mrow></mrow></mrow></math> for all <math id="S7.p5.m11" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>. Then, one proves that <math id="S7.p5.m12" class="ltx_Math" alttext="\varphi(f)=\int_{S}fgd\mu" display="inline"><mrow><mrow><mi>φ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>f</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>S</mi></msub><mrow><mi>f</mi><mo>⁢</mo><mi>g</mi><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>μ</mi></mrow></mrow></mrow></mrow></math> for all <math id="S7.p5.m13" class="ltx_Math" alttext="f\in L^{p}" display="inline"><mrow><mi>f</mi><mo>∈</mo><msup><mi>L</mi><mi>p</mi></msup></mrow></math>. Finally, one extends the result to <math id="S7.p5.m14" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math>-finite <math id="S7.p5.m15" class="ltx_Math" alttext="\mu" display="inline"><mi>μ</mi></math>. At this juncture, one obtains <math id="S7.p5.m16" class="ltx_Math" alttext="g\in L^{q}" display="inline"><mrow><mi>g</mi><mo>∈</mo><msup><mi>L</mi><mi>q</mi></msup></mrow></math> such that <math id="S7.p5.m17" class="ltx_Math" alttext="\varphi(f)=\int_{S}fgd\mu=R(g)(f)" display="inline"><mrow><mrow><mi>φ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>f</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>S</mi></msub><mrow><mi>f</mi><mo>⁢</mo><mi>g</mi><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>μ</mi></mrow></mrow></mrow><mo>=</mo><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>g</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>f</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+<div id="S7.p6" class="ltx_para">
+<p class="ltx_p">∎</p>
+</div>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Tue Jan  6 11:42:15 2026 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>
